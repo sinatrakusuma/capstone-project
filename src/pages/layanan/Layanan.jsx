@@ -1,26 +1,27 @@
+import Article  from '../../components/article/Article';
 import React from 'react'
-import Heading from '../../components/Content/Heading';
 import Footer from '../../components/footer/Footer';
+import HalfImg from '../../components/halfImg/HalfImg';
 import Hero from '../../components/hero/Hero';
 import Navbar from '../../components/navbar/Navbar';
-import Card from '../../components/card/Card';
-import "./kontak.scss";
-import Info from '../../components/Info/Info';
-import HalfImg from '../../components/halfImg/HalfImg';
-const Kontak = () => {
+import Splash from '../../components/splash/Splash';
+import Marticle from '../../components/article/Marticle';
+
+const Layanan = () => {
   return (
     <div className="container">
         <Navbar/>
         <div className="footer">
         <Hero/>
-        <Heading/>
         <HalfImg/>
-        <Info/>
-        <Card/>
+        <Marticle/>
+        <HalfImg/>
+        <Article/>  
+        <Splash/>
         <Footer/>
         </div>
     </div>
   )
 }
 
-export default Kontak;
+export default Layanan;
