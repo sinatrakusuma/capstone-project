@@ -8,14 +8,14 @@ const HalfImg = () => {
         alignItems: "center",
         justifyContent: "center",
         height: "50vh",
-        marginTop: "150px",
+        marginTop: "60px",
       }}
     >
       <div
         style={{
           width: "1152px",
-          height: "550px",
-          backgroundImage: "url(./6.jpg)",
+          height: "350px",
+          backgroundImage: "url(./8.jpg)",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           borderRadius: "20px",
