@@ -7,8 +7,8 @@ const HalfImg = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "50vh",
-        marginTop: "150px",
+        height: "80vh",
+        marginTop: "45px",
       }}
     >
       <div
