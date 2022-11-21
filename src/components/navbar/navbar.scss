@@ -1,18 +1,20 @@
-  *{
-  font-family: 'Manrope', sans-serif;
-  }
-
   .wrap{
       display: flex;
       align-items: center;
       flex-direction: row;
       justify-content: space-around;
-      
-
       div.brand{
           font-size: 0.813rem;
           color: #2E582C;
           margin-right: 380px;
+          display: flex;
+          align-items: center;
+          .icon{
+            width: 50px;
+            height: 50px;
+            background-image: url("../../../public/Dausagi.png");
+            background-size: cover;
+          }
       }
       .nav-right a{
           text-decoration: none;
@@ -34,7 +36,6 @@
           }
       }
   }
-  
   .nav-right .link:hover{
       border-bottom: 2px solid #000;
       color: #000;

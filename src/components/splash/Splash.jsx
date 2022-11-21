@@ -8,8 +8,8 @@ const Splash = () => {
       style={{
         display: "flex",
         alignItems: "center",
-        height: "80vh",
-        marginTop: "50px",
+        height: "100vh",
+        margin:"50px 0 80px",
         flexDirection: "column",
         justifyContent: "center",
       }}

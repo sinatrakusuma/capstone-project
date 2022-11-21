@@ -1,7 +1,7 @@
 import { styled, Typography } from "@mui/material";
 import { Box, Container} from "@mui/system";
 import React from "react";
-
+import "./footer.scss"
 import fbIcon from "../../media/fbicon.png";
 import twitterIcon from "../../media/twittericon.png";
 import linkedinIcon from "../../media/linkedinicon.png";
@@ -26,21 +26,10 @@ const Footer = () => {
     },
   }));
 
-  const Link = styled("span")(() => ({
-    fontSize: "16px",
-    color: "#7A7A7E",
-    fontWeight: "300",
-    cursor: "pointer",
-    mb: "200px",
-    "&:hover": {
-      color: "#000",
-    },
-  }));
-
   const DeskLink = styled("p")(() => ({
     fontSize: "16px",
-    color: "#7A7A7E",
-    fontWeight: "300",
+    color: "#FFFFFF",
+    fontWeight: "400",
     width:"350px"
   }));
 
@@ -49,16 +38,21 @@ const Footer = () => {
       <CustomContainer>
         <CustomContainer>
           <Box>
+            <div className="brand">
+            <div className="icon"></div>
+            <div className="typo-center">
             <Typography
               sx={{
                 fontSize: "20px",
-                color: "#1C1C1D",
+                color: "#FFFFFF",
                 fontWeight: "700",
-                mb: 2,
+                fontFamily:"Manrope, sans-serif"
               }}
-            >
+              >
               DAUSAGI
             </Typography>
+            </div>
+            </div>
 
             <DeskLink>DAUSAGI merupakan Platform Bank sampah digital untuk membantu dan memudahkan masyarakat dalam pengelolaan sampah.</DeskLink>
             <DeskLink>Jl. Soerkarno Hatta, No.12</DeskLink>
@@ -69,31 +63,31 @@ const Footer = () => {
             <Typography
               sx={{
                 fontSize: "20px",
-                color: "#1C1C1D",
+                color: "#FFFFFF",
                 fontWeight: "700",
                 mb: 2,
+                fontFamily:"Manrope, sans-serif"
               }}
             >
               Link
             </Typography>
-            <Link>Beranda</Link>
-            <br />
-            <Link>Bank Sampah</Link>
-            <br />
-            <Link>Daur Ulang</Link>
-            <br />
-            <Link>Layanan</Link>
-            <br />
-            <Link>Tentang Kami</Link>
+            <ul>
+            <li><a href="#">beranda</a></li>
+            <li><a href="#">bank sampah</a></li>
+            <li><a href="#">daur ulang</a></li>
+            <li><a href="#">layanan</a></li>
+            <li><a href="#">tentang kami</a></li>
+            </ul>
           </Box>
 
           <Box>
             <Typography
               sx={{
                 fontSize: "20px",
-                color: "#1C1C1D",
+                color: "#FFFFFF",
                 fontWeight: "700",
                 mb: 2,
+                fontFamily:"Manrope, sans-serif"
               }}
             >
               Temukan Kami

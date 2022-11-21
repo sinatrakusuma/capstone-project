@@ -13,10 +13,33 @@ const Desc = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "50vh",
+        height: "70vh",
         marginTop: "50px",
+        flexDirection:"column"
       }}
     >
+           <div
+        style={{
+          display:"flex",
+          justifyContent:"center",
+          alignItems:"center",
+          flexDirection:"column"
+        }}
+        >
+        <div
+        style={{
+          width: "5%",
+          height: "5px",
+          backgroundColor: "#000339",
+          margin: "0 auto",
+        }}
+      ></div>
+
+      <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#000339", my: 3 }}>
+      Cara Daur Ulang Sampah
+      </Typography>
+
+        </div>
       <div
         style={{
           width: "1152px",
@@ -45,9 +68,8 @@ const Desc = () => {
             height: "300px",
           }}
         >
-          <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#000339", mx: 10, marginTop: "-50px" }}>
-            Cara Daur Ulang Sampah
-          </Typography>
+   
+  
           <Box>
             <div
               style={{

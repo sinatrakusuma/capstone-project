@@ -6,6 +6,7 @@ import Hero from '../../components/hero/Hero';
 import Navbar from '../../components/navbar/Navbar';
 import Splash from '../../components/splash/Splash';
 import Marticle from '../../components/article/Marticle';
+import "./layanan.scss"
 
 const Layanan = () => {
   return (
