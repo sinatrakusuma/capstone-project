@@ -7,27 +7,23 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BankSampah from "./pages/bank sampah/BankSampah";
 
 function App() {
-
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/">
-        <Route index element={<Home/>} />
-      </Route>
-         <Route path="banksampah" element={<BankSampah />} />
-         <Route path="daurulang" element={<DaurUlang/>} />
-         <Route path="layanan" element={<Layanan/>} />
-         <Route path="tentangkami" element={<Kontak/>} />
-        
-    </Routes>
+      <Routes>
+        <Route path="/" index element={<Home />} />
+        <Route path="bank-sampah" element={<BankSampah />} />
+        <Route path="daur-ulang" element={<DaurUlang />} />
+        <Route path="layanan" element={<Layanan />} />
+        <Route path="tentang-kami" element={<Kontak />} />
+      </Routes>
     </BrowserRouter>
-  //   <>
-  //   {/* <Home/> */}
-  //   {/* <BankSampah/> */}
-  //   {/* <DaurUlang/> */}
-  //   <Layanan/>
-  //   {/* <Kontak/> */}
-  // </>
+    //   <>
+    //   {/* <Home/> */}
+    //   {/* <BankSampah/> */}
+    //   {/* <DaurUlang/> */}
+    //   <Layanan/>
+    //   {/* <Kontak/> */}
+    // </>
   );
 }
 

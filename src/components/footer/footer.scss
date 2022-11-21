@@ -1,59 +1,28 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-.css-1ithjzy {
-    font-size: 16px;
-    color: #FFFFFF;
-    font-weight: 400;
-    width: 100%;
-    margin-top: 14px;
-}
-.css-36s324 {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin: 0;
-    background-color: #172D15;
-    margin-top: 35px;
-}
 
-.brand{
-    display: flex;
-    align-items: center;
-}
-.typo-center{
-    display: flex;
-    align-items: center;
-}
-.icon{
-    width: 30px;
-    height: 30px;
-    background-image: url("../../../public/Dausagi\ \(1\).png");
-    background-size: cover;
-    transform: rotate(10deg);
-    position: relative;
-    right: 1px;
-}
-ul{
-    padding: 0;
-    margin: 0;
-    li{
-        list-style-type: none;
-        color: #000;
-        font-size: 16px;
-        margin-bottom:3px;
-        margin-left: none;
-        a{
-            list-style-type: none;
-            font-size: 24px;
-            text-decoration: none;
-            color:#FFFFFF;
-            font-size: 16px;
-            text-transform: capitalize;
-            font-weight: 400;
-            &:hover{
-                color: #000;
-            }
+footer{
+    width: 100%;
+
+    .logo-name{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .footer-link{
+        color: white;
+        font-weight: 300;
+        font-size: 14px;
+        transition: all .1s ease-in-out;
+        padding: 8px 0;
+        border-bottom: 1.5px solid transparent ;
+        &:hover{
+            border-bottom: 1.5px solid rgb(44, 80, 42) ;
         }
     }
+    .media-icon{
+        transition: all .1s ease-in;
+    
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    
 }
