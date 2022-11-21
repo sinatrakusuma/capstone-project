@@ -18,10 +18,7 @@ const Navbar = () => {
     <AppBar
       position="sticky"
       sx={{
-        width: {
-          xs: "100%",
-          lg: "1000px",
-        },
+        width: "100%",
         padding: {
           xs: "12px 24px",
           md: "12px 40px",

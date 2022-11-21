@@ -24,10 +24,7 @@ export default function Footer() {
     <footer>
       <Container
         sx={{
-          width: {
-            xs: "100%",
-            lg: "1000px",
-          },
+          width: "100%",
           backgroundColor: "#172D15",
           color: "#FFFFFF",
           padding: {
