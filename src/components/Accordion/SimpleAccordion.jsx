@@ -8,7 +8,7 @@ import { Box, styled } from "@mui/system";
 
 function SimpleAccordion() {
   const CustomBox = styled(Box)(({ theme }) => ({
-    width: "30%",
+    width: "100%",
     [theme.breakpoints.down("md")]: {
       width: "85%",
     },
@@ -54,7 +54,16 @@ function SimpleAccordion() {
           lingkungan
         </Typography>
       </CustomBox>
-      <div>
+      <Box
+        component="div"
+        sx={{
+          width: "100%",
+          padding: {
+            xs: "32px 24px",
+            md: "32px 40px",
+          },
+        }}
+      >
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -206,7 +215,7 @@ function SimpleAccordion() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-      </div>
+      </Box>
     </Box>
   );
 }

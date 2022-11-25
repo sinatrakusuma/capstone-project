@@ -17,13 +17,6 @@ function App() {
         <Route path="tentang-kami" element={<Kontak />} />
       </Routes>
     </BrowserRouter>
-    //   <>
-    //   {/* <Home/> */}
-    //   {/* <BankSampah/> */}
-    //   {/* <DaurUlang/> */}
-    //   <Layanan/>
-    //   {/* <Kontak/> */}
-    // </>
   );
 }
 

@@ -39,10 +39,10 @@ header{
             align-items: center;
             flex-direction: row;
             border: 1px solid none;
-            min-height: 44px;
-            min-width: 120px;
+            min-height: 40px;
+            min-width: 104px;
             border-radius: 12px;
-            background-color: #2E582C;
+            background-color: #4B6F49;
             margin: 0;
             border-bottom: 0;
             color: #fff;
@@ -50,7 +50,7 @@ header{
             -webkit-transition: all 0.3s ease-in-out;
 
             &:hover {
-                background-color: rgb(44, 80, 42);
+                background-color: #2E582C;
             }
         }
     }

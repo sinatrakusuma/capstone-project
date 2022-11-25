@@ -2,13 +2,12 @@ import { Box, styled, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
 import Button from "@mui/material/Button";
-import heroImg from "../../media/tim-mossholder-qq-8dpdlBsY-unsplash.jpg";
 
 const Hero = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
     width: "100%",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-between",
     gap: theme.spacing(5),
     marginTop: theme.spacing(3),
     [theme.breakpoints.down("md")]: {
@@ -32,7 +31,15 @@ const Hero = () => {
   return (
     <Container>
       <CustomBox>
-        <Box sx={{ flex: "1" }}>
+        <Box
+          sx={{
+            flex: "1",
+            padding: {
+              xs: "32px 24px",
+              md: "32px 40px",
+            },
+          }}
+        >
           <Typography
             variant="body2"
             sx={{
@@ -58,9 +65,9 @@ const Hero = () => {
           </Button>
         </Box>
 
-        <Box sx={{ flex: "1.25" }}>
+        <Box sx={{ justifySelf: "flex-end" }}>
           <img
-            src={heroImg}
+            src={process.env.PUBLIC_URL + "./hero.jpg"}
             alt="heroImg"
             style={{ maxWidth: "90%", marginBottom: "2rem", marginTop: "4rem" }}
           />

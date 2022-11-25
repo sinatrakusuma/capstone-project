@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import navbarLinkItem from "../../utils/navbarLinkItem";
+import navbarLinkItem from "../../data/navbarLinkItem";
 import { Link } from "react-router-dom";
 export default function NavbarLink() {
   return (
