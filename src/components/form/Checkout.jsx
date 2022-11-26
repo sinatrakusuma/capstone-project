@@ -8,6 +8,8 @@ import StepLabel from "@mui/material/StepLabel";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import getStepContent from "./GetStepContent";
+import { Link } from "react-router-dom";
+import { Box } from "@mui/material";
 
 const steps = ["Biodata", "Data Sampah", "Konfirmasi"];
 
@@ -15,6 +17,7 @@ const theme = createTheme();
 
 export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
+  const idOrder = new Date().getTime();
 
   const handleNext = () => {
     setActiveStep(activeStep + 1);
@@ -44,7 +47,14 @@ export default function Checkout() {
           variant="outlined"
           sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}
         >
-          <Typography component="h1" variant="h4" align="center">
+          <Typography
+            component="h1"
+            variant="h4"
+            align="center"
+            sx={{
+              marginBottom: "32px",
+            }}
+          >
             Tukarkan Sampahmu Disini
           </Typography>
           <Stepper
@@ -71,19 +81,43 @@ export default function Checkout() {
             ))}
           </Stepper>
           {activeStep === steps.length ? (
-            <React.Fragment>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
+                a: {
+                  padding: "12px 24px",
+                  minHeight: "40px",
+                  minWidth: "120px",
+                  backgroundColor: "#4B6F49",
+                  marginTop: "24px",
+                  borderRadius: "12px",
+                },
+              }}
+            >
               <Typography variant="h5" gutterBottom>
                 Terima kasih telah order!
               </Typography>
               <Typography variant="subtitle1">
-                Nomor order kamu adalah #2001539. Tunggu dan siapkan sampah yang
-                akan ditukar. Tim kami akan segera datang dan mengambil sampah
-                kamu.
+                Nomor order kamu adalah #{idOrder}. Tunggu dan siapkan sampah
+                yang akan ditukar. Tim kami akan segera datang dan mengambil
+                sampah kamu.
               </Typography>
-            </React.Fragment>
+              <Link to={`invoice/${idOrder}`} className="invoice_detail_btn">
+                Lihat Detail
+              </Link>
+            </Box>
           ) : (
             <React.Fragment>
-              {getStepContent(activeStep, handleNext, handleBack, steps)}
+              {getStepContent(
+                activeStep,
+                handleNext,
+                handleBack,
+                steps,
+                idOrder
+              )}
             </React.Fragment>
           )}
         </Paper>

@@ -27,12 +27,22 @@ export default function Review({ handleNext, handleBack, activeStep, steps }) {
       </Typography>
       <List disablePadding>
         {trash.map((product) => (
-          <ListItem key={product.id} sx={{ py: 1, px: 0 }}>
+          <ListItem
+            key={product.id}
+            sx={{
+              py: 1,
+              px: 0,
+            }}
+          >
             <ListItemText
-              primary={product.trashType}
-              secondary={`Jumlah : ${product.trashQty} Kg`}
+              primary="Jenis Sampah"
+              secondary={product.trashType}
             />
-            <Typography variant="body2">Rp. {product.price} /kg</Typography>
+            <ListItemText
+              primary="Jumlah"
+              secondary={`${product.trashQty} Kg`}
+            />
+            <Typography>{`Rp. ${product.price}/Kg`}</Typography>
           </ListItem>
         ))}
 
@@ -60,7 +70,7 @@ export default function Review({ handleNext, handleBack, activeStep, steps }) {
                 <Typography
                   gutterBottom
                   sx={{
-                    fontSize: "18px",
+                    fontSize: "16px",
                     fontWeight: "600",
                   }}
                 >
