@@ -1,7 +1,14 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 
-export default function InputField({ value, handle, id, label }) {
+export default function InputField({
+  value,
+  handle,
+  id,
+  label,
+  type,
+  disabled,
+}) {
   return (
     <TextField
       color="success"
@@ -9,8 +16,10 @@ export default function InputField({ value, handle, id, label }) {
       id={id}
       name={id}
       label={label}
-      fullWidth
+      type={type}
+      disabled={disabled}
       autoComplete="biodata-address"
+      fullWidth
       variant="standard"
       value={value}
       onChange={handle}

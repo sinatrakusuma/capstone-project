@@ -1,6 +1,5 @@
 const CONFIG = {
-  TRASH: "TRASH_STORAGE",
-  BIODATA: "BIODATA_STORAGE",
+  DATAORDER: "DATA_ORDER_STORAGE",
 };
 
 export default CONFIG;

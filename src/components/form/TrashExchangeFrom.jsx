@@ -1,68 +1,54 @@
 import * as React from "react";
-import { useState } from "react";
-import PropTypes from "prop-types";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import FormButton from "./FormButton";
 import MenuItem from "@mui/material/MenuItem";
-import CONFIG from "../../global/config";
 import trashTypeSelect from "../../data/trashTypeSelect";
+import InputField from "./InputField";
+import { TextField } from "@mui/material";
 
-export default function TrashExchangeForm({
-  handleNext,
-  handleBack,
-  activeStep,
-  steps,
-}) {
-  const [trashType, setTrashType] = useState("");
-  const [trashQty, setTrashQty] = useState("1");
-  const [price, setPrice] = useState("0");
-  const [total, setTotal] = useState("0");
-
-  function handleTrashType(event) {
-    setTrashType(event.target.value);
-
+export default function TrashExchangeForm({ orderData, setOrderData }) {
+  const handleTrashType = (event) => {
     if (event.target.value === "Plastik") {
-      setPrice("5000");
-      setTotal("5000");
+      setOrderData({
+        ...orderData,
+        trashType: event.target.value,
+        price: 1000,
+        total: 1000,
+      });
     } else if (event.target.value === "Kertas") {
-      setPrice("2000");
-      setTotal("2000");
+      setOrderData({
+        ...orderData,
+        trashType: event.target.value,
+        price: 2000,
+        total: 2000,
+      });
     } else if (event.target.value === "Botol") {
-      setPrice("3500");
-      setTotal("3500");
+      setOrderData({
+        ...orderData,
+        trashType: event.target.value,
+        price: 3500,
+        total: 3500,
+      });
     } else if (event.target.value === "Karet") {
-      setPrice("6000");
-      setTotal("6000");
-    } else {
-      setPrice("0");
-      setTotal("0");
+      setOrderData({
+        ...orderData,
+        trashType: event.target.value,
+        price: 6000,
+        total: 6000,
+      });
     }
-  }
+  };
 
   function handleTrashQty(event) {
-    setTrashQty(event.target.value);
-    setTotal(event.target.value * price);
+    setOrderData({
+      ...orderData,
+      trashQty: event.target.value,
+      total: orderData.price * event.target.value,
+    });
   }
 
-  const onSubmitTrashDataHandler = () => {
-    handleNext();
-    const id = new Date().toDateString();
-    const trashData = [
-      {
-        id,
-        trashQty,
-        trashType,
-        price,
-        total,
-      },
-    ];
-
-    localStorage.setItem(CONFIG.TRASH, JSON.stringify(trashData));
-  };
   return (
     <React.Fragment>
       <Typography
@@ -80,7 +66,6 @@ export default function TrashExchangeForm({
         container
         spacing={3}
         component="form"
-        onSubmit={onSubmitTrashDataHandler}
         sx={{
           padding: "32px 40px",
         }}
@@ -88,16 +73,14 @@ export default function TrashExchangeForm({
         <Grid item xs={12} md={6}>
           <TextField
             id="trashType"
-            select
-            label="Jenis Sampah"
+            select={true}
+            fullWidth
             color="success"
-            value={trashType}
-            onChange={handleTrashType}
-            helperText="Pilih Jenis Sampah"
             variant="standard"
-            sx={{
-              width: "100%",
-            }}
+            disabled={false}
+            label="Jenis Sampah"
+            value={orderData.trashType}
+            onChange={handleTrashType}
           >
             {trashTypeSelect.map((option) => (
               <MenuItem key={option.value} value={option.value}>
@@ -107,39 +90,30 @@ export default function TrashExchangeForm({
           </TextField>
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextField
-            color="success"
+          <InputField
             id="price"
             label="Harga Per Kilo"
-            fullWidth
-            autoComplete="price"
-            variant="standard"
-            value={price}
-            disabled
+            value={`Rp. ${orderData.price}`}
+            disabled={true}
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextField
-            color="success"
+          <InputField
             id="trashQty"
             label="Jumlah Sampah (Kg)"
             type="number"
-            fullWidth
-            variant="standard"
-            value={trashQty}
-            onChange={handleTrashQty}
+            disabled={false}
+            value={orderData.trashQty}
+            handle={handleTrashQty}
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextField
-            color="success"
-            id="price"
+          <InputField
+            type="text"
+            id="total"
             label="Kalukasi Harga"
-            fullWidth
-            autoComplete="price"
-            variant="standard"
-            value={total}
-            disabled
+            value={`Rp. ${orderData.total}`}
+            disabled={true}
           />
         </Grid>
         <Grid
@@ -173,20 +147,8 @@ export default function TrashExchangeForm({
               </Typography>
             }
           />
-          <FormButton
-            steps={steps}
-            activeStep={activeStep}
-            handleBack={handleBack}
-          />
         </Grid>
       </Grid>
     </React.Fragment>
   );
 }
-
-TrashExchangeForm.propTypes = {
-  handleNext: PropTypes.func.isRequired,
-  handleBack: PropTypes.func.isRequired,
-  activeStep: PropTypes.number.isRequired,
-  steps: PropTypes.array.isRequired,
-};

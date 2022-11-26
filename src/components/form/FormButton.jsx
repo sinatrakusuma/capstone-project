@@ -2,7 +2,13 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 
-export default function FormButton({ steps, activeStep, handleBack }) {
+export default function FormButton({
+  steps,
+  activeStep,
+  handleBack,
+  handleNext,
+  handleOrderSubmit,
+}) {
   return (
     <Grid
       item
@@ -34,6 +40,9 @@ export default function FormButton({ steps, activeStep, handleBack }) {
         color="success"
         id="nextButton"
         type="submit"
+        onClick={
+          activeStep === steps.length - 1 ? handleOrderSubmit : handleNext
+        }
         sx={{
           mt: 3,
           ml: 1,

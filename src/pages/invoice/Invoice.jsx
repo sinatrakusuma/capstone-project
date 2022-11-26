@@ -12,8 +12,7 @@ import { FaArrowDown } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 
 export default function Invoice() {
-  const [biodata, setBiodata] = React.useState([]);
-  const [trash, setTrash] = React.useState([]);
+  const [orderDataInvoice, setOrderDataInvoice] = React.useState([]);
   const invoiceTempate = React.useRef(null);
   const { id } = useParams();
 
@@ -36,13 +35,12 @@ export default function Invoice() {
   };
 
   React.useEffect(() => {
-    const personalData = JSON.parse(localStorage.getItem("BIODATA_STORAGE"));
-    const trashData = JSON.parse(localStorage.getItem("TRASH_STORAGE"));
-    if (personalData && trashData) {
-      setBiodata(personalData);
-      setTrash(trashData);
+    const orderData = JSON.parse(localStorage.getItem("DATA_ORDER_STORAGE"));
+    console.log(orderData);
+    if (orderData) {
+      setOrderDataInvoice(orderData);
     }
-  }, []);
+  }, [orderDataInvoice]);
   return (
     <Container
       className="container"
@@ -50,7 +48,6 @@ export default function Invoice() {
         width: "80%",
         display: "flex",
         justifyContent: "flex-start",
-        "page-break-after": "always",
       }}
     >
       <Box
@@ -74,41 +71,36 @@ export default function Invoice() {
           No.Order : {id}
         </Typography>
         <List disablePadding>
-          {trash.map((product) => (
-            <ListItem
-              key={product.id}
+          <ListItem
+            sx={{
+              py: 1,
+              px: 2,
+            }}
+          >
+            <ListItemText
+              primary="Jenis Sampah"
+              secondary={orderDataInvoice.trashType}
+            />
+            <ListItemText
+              primary="Jumlah"
+              secondary={`${orderDataInvoice.trashQty} Kg`}
+            />
+            <Typography
               sx={{
-                py: 1,
-                px: 2,
+                fontSize: "14px",
               }}
-            >
-              <ListItemText
-                primary="Jenis Sampah"
-                secondary={product.trashType}
-              />
-              <ListItemText
-                primary="Jumlah"
-                secondary={`${product.trashQty} Kg`}
-              />
-              <Typography
-                sx={{
-                  fontSize: "14px",
-                }}
-              >{`Rp. ${product.price}/Kg`}</Typography>
-            </ListItem>
-          ))}
+            >{`Rp. ${orderDataInvoice.price}/Kg`}</Typography>
+          </ListItem>
 
           <ListItem sx={{ py: 1, px: 2 }}>
             <ListItemText primary="Total" />
-            {trash.map((product) => (
-              <Typography
-                key={product.id}
-                variant="subtitle1"
-                sx={{ fontSize: "14px", fontWeight: 700 }}
-              >
-                Rp. {product.total}
-              </Typography>
-            ))}
+            <Typography
+              key={orderDataInvoice.id}
+              variant="subtitle1"
+              sx={{ fontSize: "14px", fontWeight: 700 }}
+            >
+              Rp. {orderDataInvoice.total}
+            </Typography>
           </ListItem>
         </List>
         <Grid container spacing={2} sx={{ px: 2 }}>
@@ -116,45 +108,41 @@ export default function Invoice() {
             <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
               Alamat Pengiriman
             </Typography>
-            {biodata.map((bio) => {
-              return (
-                <Box key={bio.id}>
-                  <Typography
-                    gutterBottom
-                    sx={{
-                      fontSize: "14px",
-                      fontWeight: "600",
-                    }}
-                  >
-                    {bio.name}
-                  </Typography>
-                  <Typography
-                    gutterBottom
-                    sx={{
-                      fontSize: "14px",
-                    }}
-                  >
-                    {bio.email}
-                  </Typography>
-                  <Typography
-                    gutterBottom
-                    sx={{
-                      fontSize: "14px",
-                    }}
-                  >
-                    {bio.phoneNumber}
-                  </Typography>
-                  <Typography
-                    gutterBottom
-                    sx={{
-                      fontSize: "14px",
-                    }}
-                  >
-                    {bio.address}
-                  </Typography>
-                </Box>
-              );
-            })}
+            <Box>
+              <Typography
+                gutterBottom
+                sx={{
+                  fontSize: "14px",
+                  fontWeight: "600",
+                }}
+              >
+                {orderDataInvoice.name}
+              </Typography>
+              <Typography
+                gutterBottom
+                sx={{
+                  fontSize: "14px",
+                }}
+              >
+                {orderDataInvoice.email}
+              </Typography>
+              <Typography
+                gutterBottom
+                sx={{
+                  fontSize: "14px",
+                }}
+              >
+                {orderDataInvoice.phoneNumber}
+              </Typography>
+              <Typography
+                gutterBottom
+                sx={{
+                  fontSize: "14px",
+                }}
+              >
+                {orderDataInvoice.address}
+              </Typography>
+            </Box>
           </Grid>
           <Grid item container direction="column" xs={12} sm={6}>
             <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
@@ -168,44 +156,42 @@ export default function Invoice() {
                 justifyContent: "flex-start",
               }}
             >
-              {biodata.map((payment) => (
-                <Box
-                  key={payment.name}
-                  sx={{
-                    display: "flex",
-                  }}
-                >
-                  <Grid item xs={6}>
-                    <Typography
-                      gutterBottom
-                      sx={{
-                        fontSize: "14px",
-                      }}
-                    >
-                      Transfer
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography
-                      gutterBottom
-                      sx={{
-                        fontSize: "14px",
-                      }}
-                    >
-                      {payment.name}
-                    </Typography>
-                    <Typography
-                      gutterBottom
-                      sx={{
-                        fontSize: "14px",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {payment.cardNumber}
-                    </Typography>
-                  </Grid>
-                </Box>
-              ))}
+              <Box
+                key={orderDataInvoice.name}
+                sx={{
+                  display: "flex",
+                }}
+              >
+                <Grid item xs={6}>
+                  <Typography
+                    gutterBottom
+                    sx={{
+                      fontSize: "14px",
+                    }}
+                  >
+                    Transfer
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography
+                    gutterBottom
+                    sx={{
+                      fontSize: "14px",
+                    }}
+                  >
+                    {orderDataInvoice.name}
+                  </Typography>
+                  <Typography
+                    gutterBottom
+                    sx={{
+                      fontSize: "14px",
+                      fontWeight: "600",
+                    }}
+                  >
+                    {orderDataInvoice.cardNumber}
+                  </Typography>
+                </Grid>
+              </Box>
             </Grid>
           </Grid>
         </Grid>

@@ -10,23 +10,41 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import getStepContent from "./GetStepContent";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
+import FormButton from "./FormButton";
+import CONFIG from "../../global/config";
 
 const steps = ["Biodata", "Data Sampah", "Konfirmasi"];
 
 const theme = createTheme();
 
 export default function Checkout() {
-  const [activeStep, setActiveStep] = React.useState(0);
-  const idOrder = new Date().getTime();
+  const [orderData, setOrderData] = React.useState({
+    id: +new Date(),
+    name: "",
+    phoneNumber: "",
+    address: "",
+    email: "",
+    cardNumber: "",
+    trashQty: 1,
+    trashType: "",
+    price: 0,
+    total: 0,
+  });
 
-  const handleNext = () => {
+  const [activeStep, setActiveStep] = React.useState(0);
+
+  const handleNext = (e) => {
+    e.preventDefault();
     setActiveStep(activeStep + 1);
   };
 
   const handleBack = () => {
     setActiveStep(activeStep - 1);
   };
-
+  function handleOrderSubmit(e) {
+    handleNext(e);
+    localStorage.setItem(CONFIG.DATAORDER, JSON.stringify(orderData));
+  }
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -101,24 +119,28 @@ export default function Checkout() {
                 Terima kasih telah order!
               </Typography>
               <Typography variant="subtitle1">
-                Nomor order kamu adalah #{idOrder}. Tunggu dan siapkan sampah
-                yang akan ditukar. Tim kami akan segera datang dan mengambil
-                sampah kamu.
+                Nomor order kamu adalah #{orderData.id}. Tunggu dan siapkan
+                sampah yang akan ditukar. Tim kami akan segera datang dan
+                mengambil sampah kamu.
               </Typography>
-              <Link to={`invoice/${idOrder}`} className="invoice_detail_btn">
+              <Link
+                to={`invoice/${orderData.id}`}
+                className="invoice_detail_btn"
+              >
                 Lihat Detail
               </Link>
             </Box>
           ) : (
-            <React.Fragment>
-              {getStepContent(
-                activeStep,
-                handleNext,
-                handleBack,
-                steps,
-                idOrder
-              )}
-            </React.Fragment>
+            <>
+              {getStepContent(orderData, setOrderData, activeStep)}
+              <FormButton
+                steps={steps}
+                activeStep={activeStep}
+                handleBack={handleBack}
+                handleNext={handleNext}
+                handleOrderSubmit={handleOrderSubmit}
+              />
+            </>
           )}
         </Paper>
       </Container>

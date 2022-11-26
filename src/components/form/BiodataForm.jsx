@@ -1,42 +1,9 @@
 import React from "react";
-import useInput from "../../hooks/useInput";
-import PropTypes from "prop-types";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import InputField from "./InputField";
-import FormButton from "./FormButton";
-import CONFIG from "../../global/config";
 
-export default function BiodataForm({
-  handleNext,
-  handleBack,
-  activeStep,
-  steps,
-}) {
-  const [name, handleNameChange] = useInput("");
-  const [phoneNumber, handlePhoneNumberChange] = useInput("");
-  const [address, handleAddressChange] = useInput("");
-  const [email, handleEmailChange] = useInput("");
-  const [cardNumber, handleCardNumberChange] = useInput("");
-
-  const onSubmitBiodataHandler = () => {
-    handleNext();
-    const id = new Date().toDateString();
-
-    const biodata = [
-      {
-        id,
-        name,
-        phoneNumber,
-        address,
-        email,
-        cardNumber,
-      },
-    ];
-
-    localStorage.setItem(CONFIG.BIODATA, JSON.stringify(biodata));
-  };
-
+export default function BiodataForm({ orderData, setOrderData }) {
   return (
     <React.Fragment>
       <Typography
@@ -57,61 +24,68 @@ export default function BiodataForm({
           padding: "32px 40px",
         }}
         component="form"
-        onSubmit={onSubmitBiodataHandler}
       >
         <Grid item xs={12}>
           <InputField
+            type="text"
+            disabled={false}
             id="name"
             label="Nama"
-            value={name}
-            handle={handleNameChange}
+            value={orderData.name}
+            handle={(event) =>
+              setOrderData({ ...orderData, name: event.target.value })
+            }
           />
         </Grid>
         <Grid item xs={12}>
           <InputField
+            type="text"
+            disabled={false}
             id="address"
             label="Alamat"
-            value={address}
-            handle={handleAddressChange}
+            value={orderData.address}
+            handle={(event) =>
+              setOrderData({ ...orderData, address: event.target.value })
+            }
           />
         </Grid>
         <Grid item xs={12} sm={6}>
           <InputField
+            type="email"
+            disabled={false}
             id="email"
             label="Email"
-            value={email}
-            handle={handleEmailChange}
+            value={orderData.email}
+            handle={(event) =>
+              setOrderData({ ...orderData, email: event.target.value })
+            }
           />
         </Grid>
         <Grid item xs={12} sm={6}>
           <InputField
+            type="text"
+            disabled={false}
             id="phoneNumber"
             label="No.Telepon"
-            value={phoneNumber}
-            handle={handlePhoneNumberChange}
+            value={orderData.phoneNumber}
+            handle={(event) =>
+              setOrderData({ ...orderData, phoneNumber: event.target.value })
+            }
           />
         </Grid>
         <Grid item xs={12} sm={6}>
           <InputField
+            type="email"
+            disabled={false}
             id="cardNumber"
             label="No.Rekening"
-            value={cardNumber}
-            handle={handleCardNumberChange}
+            value={orderData.cardNumber}
+            handle={(event) =>
+              setOrderData({ ...orderData, cardNumber: event.target.value })
+            }
           />
         </Grid>
-        <FormButton
-          steps={steps}
-          activeStep={activeStep}
-          handleBack={handleBack}
-        />
       </Grid>
     </React.Fragment>
   );
 }
-
-BiodataForm.propTypes = {
-  handleNext: PropTypes.func.isRequired,
-  handleBack: PropTypes.func.isRequired,
-  activeStep: PropTypes.number.isRequired,
-  steps: PropTypes.array.isRequired,
-};
