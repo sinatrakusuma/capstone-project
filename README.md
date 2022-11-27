@@ -73,7 +73,7 @@ npm run eject
 <!-- LISENSI -->
 ## Lisensi
 
-Didistribusikan dengan lisensi C22-107. Silahkan cek `LISENSI.txt` untuk informasi selengkapnya.
+Didistribusikan dengan lisensi C22-107. Silahkan cek `License.txt` untuk informasi selengkapnya.
 
 
 
