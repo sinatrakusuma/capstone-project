@@ -5,6 +5,7 @@ import Layanan from "./pages/layanan/Layanan";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BankSampah from "./pages/bank sampah/BankSampah";
+import Invoice from "./pages/invoice/Invoice";
 
 function App() {
   return (
@@ -15,15 +16,9 @@ function App() {
         <Route path="daur-ulang" element={<DaurUlang />} />
         <Route path="layanan" element={<Layanan />} />
         <Route path="tentang-kami" element={<Kontak />} />
+        <Route path="bank-sampah/invoice/:id" element={<Invoice />} />
       </Routes>
     </BrowserRouter>
-    //   <>
-    //   {/* <Home/> */}
-    //   {/* <BankSampah/> */}
-    //   {/* <DaurUlang/> */}
-    //   <Layanan/>
-    //   {/* <Kontak/> */}
-    // </>
   );
 }
 

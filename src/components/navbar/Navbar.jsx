@@ -26,6 +26,7 @@ const Navbar = () => {
         backgroundColor: "#FFFFFF",
         boxShadow: "0px 4px 4px rgba(0,0,0,0.05)",
         margin: "0 auto",
+        zIndex: 100,
       }}
     >
       <Box

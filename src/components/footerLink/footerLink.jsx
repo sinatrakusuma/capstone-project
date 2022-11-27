@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import navbarLinkItem from "../../utils/navbarLinkItem";
+import navbarLinkItem from "../../data/navbarLinkItem";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 

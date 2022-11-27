@@ -41,7 +41,7 @@ const Guide = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        marginTop:"5rem",
+        margin: "5rem 0",
       }}
     >
       <div
@@ -70,7 +70,7 @@ const Guide = () => {
             textAlign: "center",
           }}
         >
-         Berikut merupakan layanan yang ada di Dausagi
+          Berikut merupakan layanan yang ada di Dausagi
         </Typography>
       </CustomBox>
 
@@ -97,9 +97,15 @@ const Guide = () => {
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF", textAlign:"center" }}
+              sx={{
+                fontWeight: "bold",
+                fontSize: "14px",
+                color: "#0689FF",
+                textAlign: "center",
+              }}
             >
-              Kamu hanya perlu memberitahu lokasi penjemputan sampah. Tim kami akan mengambil sampah ditempatmu.
+              Kamu hanya perlu memberitahu lokasi penjemputan sampah. Tim kami
+              akan mengambil sampah ditempatmu.
             </Typography>
           </Box>
         </GuideBox>
@@ -126,9 +132,16 @@ const Guide = () => {
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF", alignItems: "center",textAlign: "center" }}
+              sx={{
+                fontWeight: "bold",
+                fontSize: "14px",
+                color: "#0689FF",
+                alignItems: "center",
+                textAlign: "center",
+              }}
             >
-              Kamu hanya perlu memberitahu lokasi penjemputan sampah. Tim kami akan mengambil sampah ditempatmu.  
+              Kamu hanya perlu memberitahu lokasi penjemputan sampah. Tim kami
+              akan mengambil sampah ditempatmu.
             </Typography>
           </Box>
         </GuideBox>
@@ -151,19 +164,23 @@ const Guide = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              
             }}
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF", textAlign: "center" }}
+              sx={{
+                fontWeight: "bold",
+                fontSize: "14px",
+                color: "#0689FF",
+                textAlign: "center",
+              }}
             >
-              Metode pembayaran transfer dapat memberikan kemudahan bagimu dalam penerimaan pembayaran.
+              Metode pembayaran transfer dapat memberikan kemudahan bagimu dalam
+              penerimaan pembayaran.
             </Typography>
           </Box>
         </GuideBox>
       </GuidesBox>
-
     </Box>
   );
 };
