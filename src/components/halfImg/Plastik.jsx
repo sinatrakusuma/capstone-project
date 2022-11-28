@@ -30,12 +30,12 @@ const Desc = () => {
         style={{
           width: "5%",
           height: "5px",
-          backgroundColor: "#000339",
+          backgroundColor: "#2E582C",
           margin: "0 auto",
         }}
       ></div>
 
-      <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#000339", my: 3 }}>
+      <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#2E582C", my: 3 }}>
       Cara Daur Ulang Sampah
       </Typography>
 
@@ -82,7 +82,7 @@ const Desc = () => {
             >
               <CustomBox>
                 <div>
-                  <Typography variant="h3" sx={{ fontSize: "30px", fontWeight: "bold", color: "#000339", my: 1 }}>
+                  <Typography variant="h3" sx={{ fontSize: "30px", fontWeight: "bold", color: "#2E582C", my: 1 }}>
                     Cara daur ulang sampah plastik
                   </Typography>
                   <Typography

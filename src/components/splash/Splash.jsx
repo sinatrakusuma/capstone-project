@@ -18,12 +18,12 @@ const Splash = () => {
         style={{
           width: "5%",
           height: "5px",
-          backgroundColor: "#000339",
+          backgroundColor: "#2E582C",
           margin: "0 auto",
         }}
       ></div>
 
-      <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#000339", my: 7 }}>
+      <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#2E582C", my: 7 }}>
         Hasil- Hasil Olahan Daur Ulang
       </Typography>
       <div

@@ -1,9 +1,10 @@
 import { Box, styled, Typography } from "@mui/material";
 import React from "react";
+import ContentCustom from "./ContentCustom";
 
 const Guide = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
-    width: "30%",
+    width: "40%",
     [theme.breakpoints.down("md")]: {
       width: "85%",
     },
@@ -11,8 +12,8 @@ const Guide = () => {
 
   const GuidesBox = styled(Box)(({ theme }) => ({
     display: "flex",
-    justifyContent: "space-around",
-    width: "70%",
+    justifyContent: "space-between",
+    width: "85%",
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
     [theme.breakpoints.down("md")]: {
@@ -48,14 +49,14 @@ const Guide = () => {
         style={{
           width: "5%",
           height: "5px",
-          backgroundColor: "#000339",
+          backgroundColor: "#2E582C",
           margin: "0 auto",
         }}
       ></div>
 
       <Typography
         variant="h3"
-        sx={{ fontSize: "35px", fontWeight: "bold", color: "#000339", my: 3 }}
+        sx={{ fontSize: "35px", fontWeight: "bold", color: "#2E582C", my: 3 }}
       >
         Layanan kami
       </Typography>
@@ -66,7 +67,7 @@ const Guide = () => {
           sx={{
             fontSize: "16px",
             fontWeight: "500",
-            color: "#5A6473",
+            color: "#7D7D7D",
             textAlign: "center",
           }}
         >
@@ -76,13 +77,22 @@ const Guide = () => {
 
       <GuidesBox>
         <GuideBox>
+        <ContentCustom
+        Image="url(./6.jpg)"/>
+        {/* <div
+        style={{
+          width:"280px",
+          height:"150px",
+          border:"1px solid red",
+          borderRadius:"55px"
+        }}></div> */}
           <Typography
             variant="body2"
             sx={{
-              fontWeight: "500",
+              fontWeight: "bold",
               fontSize: "20px",
               color: "#3B3c45",
-              my: 1,
+              my: 2,
             }}
           >
             Bank Sampah
@@ -98,9 +108,9 @@ const Guide = () => {
             <Typography
               variant="body2"
               sx={{
-                fontWeight: "bold",
+                fontWeight: "500",
                 fontSize: "14px",
-                color: "#0689FF",
+                color: "#7D7D7D",
                 textAlign: "center",
               }}
             >
@@ -111,13 +121,22 @@ const Guide = () => {
         </GuideBox>
 
         <GuideBox>
+        <ContentCustom
+        Image="url(./6.jpg)"/>
+        {/* <div
+        style={{
+          width:"280px",
+          height:"150px",
+          border:"1px solid red",
+          borderRadius:"55px"
+        }}></div> */}
           <Typography
             variant="body2"
             sx={{
-              fontWeight: "500",
+              fontWeight: "bold",
               fontSize: "20px",
               color: "#3B3c45",
-              my: 1,
+              my: 2,
             }}
           >
             Pick Up Sampah
@@ -133,9 +152,9 @@ const Guide = () => {
             <Typography
               variant="body2"
               sx={{
-                fontWeight: "bold",
+                fontWeight: "500",
                 fontSize: "14px",
-                color: "#0689FF",
+                color: "#7D7D7D",
                 alignItems: "center",
                 textAlign: "center",
               }}
@@ -147,13 +166,22 @@ const Guide = () => {
         </GuideBox>
 
         <GuideBox>
+        <ContentCustom
+        Image="url(./6.jpg)"/>
+        {/* <div
+        style={{
+          width:"280px",
+          height:"150px",
+          border:"1px solid red",
+          borderRadius:"55px"
+        }}></div> */}
           <Typography
             variant="body2"
             sx={{
-              fontWeight: "500",
+              fontWeight: "bold",
               fontSize: "20px",
               color: "#3B3c45",
-              my: 1,
+              my: 2,
             }}
           >
             Transfer
@@ -169,9 +197,9 @@ const Guide = () => {
             <Typography
               variant="body2"
               sx={{
-                fontWeight: "bold",
+                fontWeight: "500",
                 fontSize: "14px",
-                color: "#0689FF",
+                color: "#7D7D7D",
                 textAlign: "center",
               }}
             >

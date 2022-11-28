@@ -69,7 +69,7 @@ const Marticle = () => {
                 }}
               >
                 <div>
-                  <Typography variant="h3" sx={{ fontSize: "25px", fontWeight: "bold", color: "#000339", my: 1 }}>
+                  <Typography variant="h3" sx={{ fontSize: "25px", fontWeight: "bold", color: "#2E582C", my: 1 }}>
                     Sampah Yang Bisa di daur ulang
                   </Typography>
 
@@ -102,7 +102,7 @@ const Marticle = () => {
                 }}
               >
                 <div>
-                  <Typography variant="h3" sx={{ fontSize: "25px", fontWeight: "bold", color: "#000339", my: 1 }}>
+                  <Typography variant="h3" sx={{ fontSize: "25px", fontWeight: "bold", color: "#2E582C", my: 1 }}>
                     Sampah yang tidak bisa didaur ulang
                   </Typography>
 

@@ -52,7 +52,8 @@ const Hero = () => {
           >
             Selamat Datang Di Website Dausagi
           </Typography>
-          <Title variant="h1">Kelola Sampahmu Bersama Kami.</Title>
+          <Title variant="h1"
+          sx={{color:"#2E582C"}}>Kelola Sampahmu Bersama Kami.</Title>
           <Typography
             variant="body2"
             sx={{ fontSize: "18px", color: "#5A6473", my: 4 }}

@@ -57,7 +57,7 @@ const Desc = () => {
             >
               <CustomBox>
                 <div>
-                  <Typography variant="h3" sx={{ fontSize: "30px", fontWeight: "bold", color: "#000339", my: 1 }}>
+                  <Typography variant="h3" sx={{ fontSize: "30px", fontWeight: "bold", color: "#2E582C", my: 1 }}>
                     Cara daur ulang sampah kertas
                   </Typography>
                   <Typography
