@@ -24,10 +24,9 @@ header{
                 transition: border-bottom 0.1s;
                 -webkit-transition: border-bottom 0.2s;
             }
-    
             &:hover {
-                border-bottom: 2px solid #000;
-                color: #000;
+                border-bottom: 2px solid #2E582C;
+                color: #2E582C;
                 transition: border-bottom 0.1s;
                 -webkit-transition: border-bottom 0.2s;
             }
@@ -42,15 +41,18 @@ header{
             min-height: 40px;
             min-width: 104px;
             border-radius: 12px;
-            background-color: #4B6F49;
+            background-color: #2E582C;
             margin: 0;
-            border-bottom: 0;
+            border:2px solid transparent;
             color: #fff;
             transition: all 0.3s ease-in-out;
             -webkit-transition: all 0.3s ease-in-out;
+            font-weight: 700;
 
             &:hover {
-                background-color: #2E582C;
+                background-color: #fff;
+                color:#2E582C ;
+                border:2px solid #2E582C;
             }
         }
     }

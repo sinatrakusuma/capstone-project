@@ -71,6 +71,7 @@ export default function Checkout() {
             align="center"
             sx={{
               marginBottom: "32px",
+              color:"#2E582C"
             }}
           >
             Tukarkan Sampahmu Disini

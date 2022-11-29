@@ -1,7 +1,7 @@
 import { Box, styled, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
-import Button from "@mui/material/Button";
+import CustomButton from "../CustomButton/CustomButton";
 
 const Hero = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
@@ -61,9 +61,12 @@ const Hero = () => {
             Jadikan lingkunganmu menjadi tempat paling nyaman dan bebas dari
             sampah. Kami siap membantu mengelola sampah disekitarmu!
           </Typography>
-          <Button variant="contained" href="#contained-buttons">
-            Kontak Kami
-          </Button>
+          <CustomButton
+          backgroundColor='#2E582C'
+          color='#ffffff'
+          textButton=' Kontak Kami'
+          moreBtn={true}
+          />
         </Box>
 
         <Box sx={{ justifySelf: "flex-end" }}>
