@@ -13,7 +13,7 @@ const Desc = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "50vh",
+        height: "30vh",
         marginTop: "50px",
       }}
     >
@@ -32,7 +32,7 @@ const Desc = () => {
           style={{
             width: "400px",
             height: "300px",
-            border: "1px solid red",
+            // border: "1px solid red",
             backgroundImage: "url(./b.jpg)",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",

@@ -54,10 +54,7 @@ const Guide = () => {
         }}
       ></div>
 
-      <Typography
-        variant="h3"
-        sx={{ fontSize: "35px", fontWeight: "bold", color: "#2E582C", my: 3 }}
-      >
+      <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#2E582C", my: 3 }}>
         Layanan kami
       </Typography>
 
@@ -77,9 +74,8 @@ const Guide = () => {
 
       <GuidesBox>
         <GuideBox>
-        <ContentCustom
-        Image="url(./6.jpg)"/>
-        {/* <div
+          <ContentCustom Image="url(./z.jpg)" />
+          {/* <div
         style={{
           width:"280px",
           height:"150px",
@@ -114,16 +110,14 @@ const Guide = () => {
                 textAlign: "center",
               }}
             >
-              Kamu hanya perlu memberitahu lokasi penjemputan sampah. Tim kami
-              akan mengambil sampah ditempatmu.
+              Di Dausagi kamu bisa menabung sampah dan <br /> dapat ditukar dengan benefit yang kami tawarkan. Kamu bisa memilih benefit apa yang kamu butuhkan.
             </Typography>
           </Box>
         </GuideBox>
 
         <GuideBox>
-        <ContentCustom
-        Image="url(./6.jpg)"/>
-        {/* <div
+          <ContentCustom Image="url(./y.jpg)" />
+          {/* <div
         style={{
           width:"280px",
           height:"150px",
@@ -159,16 +153,14 @@ const Guide = () => {
                 textAlign: "center",
               }}
             >
-              Kamu hanya perlu memberitahu lokasi penjemputan sampah. Tim kami
-              akan mengambil sampah ditempatmu.
+              Kamu hanya perlu memberitahu lokasi penjemputan sampah. Tim kami akan mengambil sampah ditempatmu.
             </Typography>
           </Box>
         </GuideBox>
 
         <GuideBox>
-        <ContentCustom
-        Image="url(./6.jpg)"/>
-        {/* <div
+          <ContentCustom Image="url(./x.jpg)" />
+          {/* <div
         style={{
           width:"280px",
           height:"150px",
@@ -203,8 +195,7 @@ const Guide = () => {
                 textAlign: "center",
               }}
             >
-              Metode pembayaran transfer dapat memberikan kemudahan bagimu dalam
-              penerimaan pembayaran.
+              Metode pembayaran transfer dapat memberikan kemudahan bagimu dalam penerimaan pembayaran.
             </Typography>
           </Box>
         </GuideBox>

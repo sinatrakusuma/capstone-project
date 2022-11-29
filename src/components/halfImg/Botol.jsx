@@ -32,7 +32,7 @@ const Desc = () => {
           style={{
             width: "400px",
             height: "300px",
-            border: "1px solid red",
+            // border: "1px solid red",
             backgroundImage: "url(./c.jpg)",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",

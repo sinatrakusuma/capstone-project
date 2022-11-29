@@ -13,33 +13,32 @@ const Desc = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "70vh",
-        marginTop: "50px",
-        flexDirection:"column"
+        height: "60vh",
+        marginTop: "5px",
+        flexDirection: "column",
       }}
     >
-           <div
+      <div
         style={{
-          display:"flex",
-          justifyContent:"center",
-          alignItems:"center",
-          flexDirection:"column"
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
         }}
-        >
+      >
         <div
-        style={{
-          width: "5%",
-          height: "5px",
-          backgroundColor: "#2E582C",
-          margin: "0 auto",
-        }}
-      ></div>
+          style={{
+            width: "5%",
+            height: "5px",
+            backgroundColor: "#2E582C",
+            margin: "0 auto",
+          }}
+        ></div>
 
-      <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#2E582C", my: 3 }}>
-      Cara Daur Ulang Sampah
-      </Typography>
-
-        </div>
+        <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#2E582C", my: 3 }}>
+          Cara Daur Ulang Sampah
+        </Typography>
+      </div>
       <div
         style={{
           width: "1152px",
@@ -55,7 +54,7 @@ const Desc = () => {
           style={{
             width: "400px",
             height: "300px",
-            border: "1px solid red",
+            // border: "1px solid red",
             backgroundImage: "url(./a.jpg)",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -68,8 +67,6 @@ const Desc = () => {
             height: "300px",
           }}
         >
-   
-  
           <Box>
             <div
               style={{

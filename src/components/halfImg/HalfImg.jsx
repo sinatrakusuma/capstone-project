@@ -13,8 +13,8 @@ const HalfImg = () => {
     >
       <div
         style={{
-          width: "1152px",
-          height: "550px",
+          width: "84vw",
+          height: "70vh",
           backgroundImage: "url(./6.jpg)",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
