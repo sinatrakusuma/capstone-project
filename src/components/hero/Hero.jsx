@@ -8,72 +8,88 @@ const Hero = () => {
     width: "100%",
     display: "flex",
     justifyContent: "space-between",
-    gap: theme.spacing(5),
+    alignItems: "center",
+    gap: theme.spacing(8),
     marginTop: theme.spacing(3),
     [theme.breakpoints.down("md")]: {
-      flexDirection: "column",
-      alignItems: "center",
+      flexDirection: "column-reverse",
       textAlign: "center",
+      gap: theme.spacing(4),
     },
   }));
 
   const Title = styled(Typography)(({ theme }) => ({
-    fontSize: "36px",
+    fontSize: "40px",
     width: "100%",
     color: "#000336",
-    fontWeight: "bold",
-    margin: theme.spacing(4, 0, 4, 0),
+    fontWeight: "700",
+    margin: theme.spacing(2, 0, 2, 0),
     [theme.breakpoints.down("sm")]: {
       fontSize: "40px",
     },
   }));
 
   return (
-    <Container>
+    <Container
+      sx={{
+        minHeight: "400px",
+        padding: {
+          xs: "0 24px",
+          md: "0 80px",
+        },
+        fontFamily: "Manrope",
+      }}
+    >
       <CustomBox>
         <Box
           sx={{
+            width: "100%",
             flex: "1",
-            padding: {
-              xs: "32px 24px",
-              md: "32px 40px",
-            },
           }}
         >
+          <Title variant="h1" sx={{ color: "#2E582C" }}>
+            Kelola Sampahmu Bersama Kami.
+          </Title>
           <Typography
             variant="body2"
             sx={{
-              fontSize: "18px",
-              color: "#687690",
-              fontWeight: "500",
-              mt: 10,
-              mb: 4,
+              fontSize: "16px",
+              color: "#7D7D7D",
+              my: 2,
+              marginBottom: "32px",
             }}
-          >
-            Selamat Datang Di Website Dausagi
-          </Typography>
-          <Title variant="h1"
-          sx={{color:"#2E582C"}}>Kelola Sampahmu Bersama Kami.</Title>
-          <Typography
-            variant="body2"
-            sx={{ fontSize: "18px", color: "#5A6473", my: 4 }}
           >
             Jadikan lingkunganmu menjadi tempat paling nyaman dan bebas dari
             sampah. Kami siap membantu mengelola sampah disekitarmu!
           </Typography>
           <CustomButton
-          backgroundColor='#2E582C'
-          color='#ffffff'
-          textButton=' Kontak Kami'
-          moreBtn={true}
+            backgroundColor="#CFFE64"
+            color="#2E582C"
+            textButton="Tukarkan Sampah"
+            moreBtn={true}
+            navigation="bank-sampah"
           />
         </Box>
 
-        <Box sx={{ justifySelf: "flex-end" }}>
+        <Box
+          sx={{
+            width: {
+              sx: "100%",
+              lg: "calc(100% / 3)",
+            },
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+          }}
+        >
           <img
-            src={process.env.PUBLIC_URL + "./hero.jpg"}
+            src={process.env.PUBLIC_URL + "./heroHome.svg"}
             alt="heroImg"
-            style={{ maxWidth: "90%", marginBottom: "2rem", marginTop: "4rem" }}
+            style={{
+              width: "100%",
+              marginBottom: "2rem",
+              marginTop: "4rem",
+            }}
           />
         </Box>
       </CustomBox>

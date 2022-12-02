@@ -5,19 +5,18 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import FooterLink from "../footerLink/footerLink";
 import NavbarBrand from "../navbarBrand/navbarBrand";
 import SocialMediaFooter from "../socialMediaFooter/socialMediaFooter";
-import "./footer.scss";
 
 export default function Footer() {
   const TextWithIcon = styled("div")(() => ({
     fontFamily: "manrope",
     fontWeight: "300",
-    fontSize: "14px",
+    fontSize: "12px",
     color: "#E7E7E7",
   }));
 
   const FooterTextLink = styled("p")(() => ({
     fontWeight: 300,
-    fontSize: "14px",
+    fontSize: "12px",
   }));
 
   return (
@@ -25,7 +24,7 @@ export default function Footer() {
       component="footer"
       sx={{
         width: "100%",
-        backgroundColor: "#172D15",
+        backgroundColor: "#2E582C",
         color: "#FFFFFF",
         padding: {
           xs: "32px 24px",
@@ -38,7 +37,10 @@ export default function Footer() {
           md: "row",
         },
         alignItems: "flex-start",
-        gap: "24px",
+        gap: {
+          xs: "32px",
+          md: "24px",
+        },
       }}
     >
       <Box
@@ -57,8 +59,9 @@ export default function Footer() {
           sx={{
             fontFamily: "manrope",
             fontWeight: "300",
-            fontSize: "14px",
+            fontSize: "12px",
             color: "#E7E7E7",
+            lineHeight: "24px",
           }}
         >
           DAUSAGI merupakan Platform Bank sampah digital untuk membantu dan

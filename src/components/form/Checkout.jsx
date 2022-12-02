@@ -56,8 +56,8 @@ export default function Checkout() {
           },
           mb: 4,
           padding: {
-            xs: "24px",
-            sm: "24px 0",
+            xs: "40px 24px",
+            md: "40px 80px",
           },
         }}
       >
@@ -71,7 +71,7 @@ export default function Checkout() {
             align="center"
             sx={{
               marginBottom: "32px",
-              color:"#2E582C"
+              color: "#2E582C",
             }}
           >
             Tukarkan Sampahmu Disini

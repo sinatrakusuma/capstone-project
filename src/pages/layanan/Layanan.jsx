@@ -5,8 +5,6 @@ import HalfImg from "../../components/halfImg/HalfImg";
 import Hero from "../../components/hero/Hero";
 import Navbar from "../../components/navbar/Navbar";
 import CardBackground from "../../components/cardimg/CardBackground";
-// import Splash from "../../components/splash/Splash";
-// import Marticle from '../../components/article/Marticle';
 import "./layanan.scss";
 
 const Layanan = () => {

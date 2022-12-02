@@ -1,6 +1,6 @@
 import { Button, styled } from "@mui/material";
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const CustomButton = ({
   backgroundColor,
@@ -40,12 +40,12 @@ const CustomButton = ({
 };
 
 CustomButton.propTypes = {
-    backgroundColor: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired,
-    textButton: PropTypes.string.isRequired,
-    generalBtn:PropTypes.bool.isRequired,
-    specialBtn:PropTypes.bool.isRequired,
-    moreBtn:PropTypes.bool.isRequired
-  };
-  
+  backgroundColor: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  textButton: PropTypes.string.isRequired,
+  generalBtn: PropTypes.bool.isRequired,
+  specialBtn: PropTypes.bool.isRequired,
+  moreBtn: PropTypes.bool.isRequired,
+};
+
 export default CustomButton;

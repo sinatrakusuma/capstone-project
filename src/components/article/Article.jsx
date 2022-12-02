@@ -28,16 +28,17 @@ const Article = () => {
             alignItems: "center",
           }}
         >
-          <div
-            style={{
-              width: "5%",
-              height: "5px",
-              backgroundColor: "#2E582C",
-              margin: "0 auto",
+          <Typography
+            variant="h3"
+            sx={{
+              fontSize: "35px",
+              fontWeight: "bold",
+              color: "#2E582C",
+              my: 3,
+              padding: "12px",
+              borderTop: "3px solid #CFFE64",
             }}
-          ></div>
-
-          <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#2E582C", my: 3 }}>
+          >
             Tentang kami
           </Typography>
 
@@ -51,8 +52,12 @@ const Article = () => {
                 textAlign: "justify",
               }}
             >
-              Aplikasi ini dibangun pada tahun 2022 dengan tujuan untuk menyelesaikan atau menjawab solusi dari susahnya menumbuhkan kesadaran masyarakat mengenai sampah sehingga bersikap tidak peduli terhadap lingkungan, dimana sampah
-              dapat menyebabkan berbagai macam bencana sehingga sangat diperlukan kesadaran masyarakat akan sampah ini.
+              Aplikasi ini dibangun pada tahun 2022 dengan tujuan untuk
+              menyelesaikan atau menjawab solusi dari susahnya menumbuhkan
+              kesadaran masyarakat mengenai sampah sehingga bersikap tidak
+              peduli terhadap lingkungan, dimana sampah dapat menyebabkan
+              berbagai macam bencana sehingga sangat diperlukan kesadaran
+              masyarakat akan sampah ini.
             </Typography>
           </CustomBox>
         </div>
@@ -66,16 +71,17 @@ const Article = () => {
             alignItems: "center",
           }}
         >
-          <div
-            style={{
-              width: "5%",
-              height: "5px",
-              backgroundColor: "#2E582C",
-              margin: "0 auto",
+          <Typography
+            variant="h3"
+            sx={{
+              fontSize: "35px",
+              fontWeight: "bold",
+              color: "#2E582C",
+              my: 3,
+              padding: "12px",
+              borderTop: "3px solid #CFFE64",
             }}
-          ></div>
-
-          <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#2E582C", my: 3 }}>
+          >
             Tentang Aplikasi
           </Typography>
 
@@ -89,8 +95,12 @@ const Article = () => {
                 textAlign: "justify",
               }}
             >
-              Aplikasi ini merupakan sebuah aplikasi berbasis web yang dikembangkan untuk memanagement sampah masyarakat dimana ketika melakukan penyetoran sampah akan memberikan feedback seperti saldo sehingga selain menjadikan masyarakat
-              bisa memanagement sampah mereka juga akan mendapat penghasilan dan lingkungan pun terjaga dengan menggunakan aplikasi ini.
+              Aplikasi ini merupakan sebuah aplikasi berbasis web yang
+              dikembangkan untuk memanagement sampah masyarakat dimana ketika
+              melakukan penyetoran sampah akan memberikan feedback seperti saldo
+              sehingga selain menjadikan masyarakat bisa memanagement sampah
+              mereka juga akan mendapat penghasilan dan lingkungan pun terjaga
+              dengan menggunakan aplikasi ini.
             </Typography>
           </CustomBox>
         </div>

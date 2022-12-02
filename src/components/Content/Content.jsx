@@ -1,23 +1,28 @@
-import { Box, styled, Typography } from "@mui/material";
 import React from "react";
+import { Box, styled, Typography } from "@mui/material";
 import ContentCustom from "./ContentCustom";
+import { Container } from "@mui/system";
+import dataContentServicesHome from "../../data/dataContentServicesHome";
+import HeadingSection from "../headingSection/headingSection";
+import HeadingHelperText from "../headingHelperText/headingHelperText";
 
 const Guide = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
     width: "40%",
     [theme.breakpoints.down("md")]: {
-      width: "85%",
+      width: "100%",
     },
   }));
 
   const GuidesBox = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "space-between",
-    width: "85%",
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
+    alignItems: "flex-start",
+    width: "100%",
+    gap: "24px",
     [theme.breakpoints.down("md")]: {
       width: "100%",
+      gap: "12px",
     },
     [theme.breakpoints.down("sm")]: {
       marginBottom: "0",
@@ -26,181 +31,84 @@ const Guide = () => {
   }));
 
   const GuideBox = styled(Box)(({ theme }) => ({
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginTop: theme.spacing(6),
+    padding: "0 12px",
     [theme.breakpoints.down("sm")]: {
-      margin: theme.spacing(2, 0, 2, 0),
+      margin: theme.spacing(4, 0),
     },
   }));
 
   return (
-    <Box
+    <Container
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        margin: "5rem 0",
+        padding: {
+          xs: "40px 24px",
+          md: "40px 80px",
+        },
       }}
     >
-      <div
-        style={{
-          width: "5%",
-          height: "5px",
-          backgroundColor: "#2E582C",
-          margin: "0 auto",
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "5rem 0",
         }}
-      ></div>
+      >
+        <HeadingSection heading="Layanan Kami" />
+        <CustomBox>
+          <HeadingHelperText helperText="Berikut merupakan layanan yang ada di Dausagi" />
+        </CustomBox>
 
-      <Typography variant="h3" sx={{ fontSize: "35px", fontWeight: "bold", color: "#2E582C", my: 3 }}>
-        Layanan kami
-      </Typography>
-
-      <CustomBox>
-        <Typography
-          variant="body2"
-          sx={{
-            fontSize: "16px",
-            fontWeight: "500",
-            color: "#7D7D7D",
-            textAlign: "center",
-          }}
-        >
-          Berikut merupakan layanan yang ada di Dausagi
-        </Typography>
-      </CustomBox>
-
-      <GuidesBox>
-        <GuideBox>
-          <ContentCustom Image="url(./z.jpg)" />
-          {/* <div
-        style={{
-          width:"280px",
-          height:"150px",
-          border:"1px solid red",
-          borderRadius:"55px"
-        }}></div> */}
-          <Typography
-            variant="body2"
-            sx={{
-              fontWeight: "bold",
-              fontSize: "20px",
-              color: "#3B3c45",
-              my: 2,
-            }}
-          >
-            Bank Sampah
-          </Typography>
-          <Box
-            sx={{
-              cursor: "pointer",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Typography
-              variant="body2"
-              sx={{
-                fontWeight: "500",
-                fontSize: "14px",
-                color: "#7D7D7D",
-                textAlign: "center",
-              }}
-            >
-              Di Dausagi kamu bisa menabung sampah dan <br /> dapat ditukar dengan benefit yang kami tawarkan. Kamu bisa memilih benefit apa yang kamu butuhkan.
-            </Typography>
-          </Box>
-        </GuideBox>
-
-        <GuideBox>
-          <ContentCustom Image="url(./y.jpg)" />
-          {/* <div
-        style={{
-          width:"280px",
-          height:"150px",
-          border:"1px solid red",
-          borderRadius:"55px"
-        }}></div> */}
-          <Typography
-            variant="body2"
-            sx={{
-              fontWeight: "bold",
-              fontSize: "20px",
-              color: "#3B3c45",
-              my: 2,
-            }}
-          >
-            Pick Up Sampah
-          </Typography>
-          <Box
-            sx={{
-              cursor: "pointer",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Typography
-              variant="body2"
-              sx={{
-                fontWeight: "500",
-                fontSize: "14px",
-                color: "#7D7D7D",
-                alignItems: "center",
-                textAlign: "center",
-              }}
-            >
-              Kamu hanya perlu memberitahu lokasi penjemputan sampah. Tim kami akan mengambil sampah ditempatmu.
-            </Typography>
-          </Box>
-        </GuideBox>
-
-        <GuideBox>
-          <ContentCustom Image="url(./x.jpg)" />
-          {/* <div
-        style={{
-          width:"280px",
-          height:"150px",
-          border:"1px solid red",
-          borderRadius:"55px"
-        }}></div> */}
-          <Typography
-            variant="body2"
-            sx={{
-              fontWeight: "bold",
-              fontSize: "20px",
-              color: "#3B3c45",
-              my: 2,
-            }}
-          >
-            Transfer
-          </Typography>
-          <Box
-            sx={{
-              cursor: "pointer",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Typography
-              variant="body2"
-              sx={{
-                fontWeight: "500",
-                fontSize: "14px",
-                color: "#7D7D7D",
-                textAlign: "center",
-              }}
-            >
-              Metode pembayaran transfer dapat memberikan kemudahan bagimu dalam penerimaan pembayaran.
-            </Typography>
-          </Box>
-        </GuideBox>
-      </GuidesBox>
-    </Box>
+        <GuidesBox>
+          {dataContentServicesHome.map((data) => {
+            return (
+              <GuideBox key={data.id}>
+                <ContentCustom Image={data.imageUrl} />
+                <Typography
+                  variant="body2"
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: "20px",
+                    color: "#2E582C",
+                    my: 2,
+                    textAlign: "center",
+                    fontFamily: "Manrope",
+                  }}
+                >
+                  {data.title}
+                </Typography>
+                <Box
+                  sx={{
+                    cursor: "pointer",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontWeight: "500",
+                      fontSize: "12px",
+                      color: "#7D7D7D",
+                      textAlign: "center",
+                      fontFamily: "Manrope",
+                    }}
+                  >
+                    {data.content}
+                  </Typography>
+                </Box>
+              </GuideBox>
+            );
+          })}
+        </GuidesBox>
+      </Box>
+    </Container>
   );
 };
 

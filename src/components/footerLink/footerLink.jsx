@@ -10,9 +10,8 @@ export default function FooterLink() {
       <Typography
         sx={{
           marginBottom: "12px",
-          fontSize: "20px",
-          fontWeight: 500,
-          letterSpacing: "1px",
+          fontSize: "16px",
+          fontWeight: 600,
         }}
       >
         Link

@@ -1,27 +1,33 @@
 // import Splash from '../../components/splash/Splash'
 import React from "react";
 import Footer from "../../components/footer/Footer";
-import Hero from "../../components/hero/Hero";
 import Navbar from "../../components/navbar/Navbar";
-import Content from "../../components/Content/Content";
 import "./banksampah.scss";
-// import AddressForm from "../../components/form/AddressForm";
-// import Payment from "../../components/form/Payment";
-// import { useState } from "react";
 import Checkout from "../../components/form/Checkout";
+import HeroWasteBank from "../../components/heroWasteBank/heroWasteBank";
+import SectionWasteInfo from "../../components/sectionWasteInfo/sectionWasteInfo";
+import dataWasteCategory from "../../data/dataWasteCategory";
+import dataStepSwapWaste from "../../data/dataStepSwapTrash";
 
 const BankSampah = () => {
-  // const [isStepForm, setIsStepForm] = useState(1);
-  // const [shippingData, setShippingData] = useState({});
-
-  // console.log(shippingData);
-
   return (
     <div className="container">
       <Navbar />
-      <Hero />
-      <Content />
-
+      <HeroWasteBank />
+      <SectionWasteInfo
+        dataInfo={dataWasteCategory}
+        direction="row"
+        heading="Kategori Sampah"
+        helperText="Berikut adalah sampah-sampah yang dapat kamu tukarkan di Dausagi"
+        background="#F5F5F5"
+      />
+      <SectionWasteInfo
+        dataInfo={dataStepSwapWaste}
+        direction="column"
+        heading="Cara Tukar Sampah"
+        helperText="Ada beberapa tahapan yang harus kamu lakukan sebelum  menukar sampah di Dausagi, antara lain"
+        background="transparent"
+      />
       <Checkout />
       <div className="footer">
         <Footer />

@@ -2,6 +2,8 @@ import React from "react";
 import { Box } from "@mui/material";
 import navbarLinkItem from "../../data/navbarLinkItem";
 import { Link } from "react-router-dom";
+import CustomButton from "../CustomButton/CustomButton";
+
 export default function NavbarLink() {
   return (
     <Box
@@ -44,9 +46,13 @@ export default function NavbarLink() {
           </Link>
         );
       })}
-      <Link to="/" className="contactBtn">
-        Kontak
-      </Link>
+      <CustomButton
+        backgroundColor="#CFFE64"
+        color="#2E582C"
+        textButton="Kontak"
+        moreBtn={true}
+        navigation="tentang-kami"
+      />
     </Box>
   );
 }

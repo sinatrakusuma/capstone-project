@@ -36,7 +36,6 @@ export default function Invoice() {
 
   React.useEffect(() => {
     const orderData = JSON.parse(localStorage.getItem("DATA_ORDER_STORAGE"));
-    console.log(orderData);
     if (orderData) {
       setOrderDataInvoice(orderData);
     }

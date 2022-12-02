@@ -16,9 +16,8 @@ export default function SocialMediaFooter() {
       <Typography
         sx={{
           marginBottom: "12px",
-          fontSize: "20px",
-          fontWeight: 500,
-          letterSpacing: "1px",
+          fontSize: "16px",
+          fontWeight: 600,
         }}
       >
         Temukan Kami
@@ -32,19 +31,19 @@ export default function SocialMediaFooter() {
         }}
       >
         <Link to="/" className="media-icon">
-          <FaFacebook size={24} />
+          <FaFacebook size={18} />
         </Link>
         <Link to="/" className="media-icon">
-          <FaInstagram size={24} />
+          <FaInstagram size={18} />
         </Link>
         <Link to="/" className="media-icon">
-          <FaYoutube size={24} />
+          <FaYoutube size={18} />
         </Link>
         <Link to="/" className="media-icon">
-          <FaTelegram size={24} />
+          <FaTelegram size={18} />
         </Link>
         <Link to="/" className="media-icon">
-          <FaWhatsapp size={24} />
+          <FaWhatsapp size={18} />
         </Link>
       </Box>
     </Box>

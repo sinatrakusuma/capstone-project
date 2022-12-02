@@ -38,6 +38,20 @@ export default function TrashExchangeForm({ orderData, setOrderData }) {
         price: 6000,
         total: 6000,
       });
+    } else if (event.target.value === "Kaca") {
+      setOrderData({
+        ...orderData,
+        trashType: event.target.value,
+        price: 4000,
+        total: 4000,
+      });
+    } else if (event.target.value === "Kayu") {
+      setOrderData({
+        ...orderData,
+        trashType: event.target.value,
+        price: 2500,
+        total: 2500,
+      });
     }
   };
 

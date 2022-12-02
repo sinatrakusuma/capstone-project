@@ -11,6 +11,12 @@ const trashTypeSelect = [
   {
     value: "Karet",
   },
+  {
+    value: "Kaca",
+  },
+  {
+    value: "Kayu",
+  },
 ];
 
 export default trashTypeSelect;
