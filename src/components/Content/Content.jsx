@@ -72,8 +72,11 @@ const Guide = () => {
                 <Typography
                   variant="body2"
                   sx={{
-                    fontWeight: "bold",
-                    fontSize: "20px",
+                    fontWeight: "700",
+                    fontSize: {
+                      xs: "20px",
+                      md: "24px",
+                    },
                     color: "#2E582C",
                     my: 2,
                     textAlign: "center",
@@ -93,11 +96,15 @@ const Guide = () => {
                   <Typography
                     variant="body2"
                     sx={{
-                      fontWeight: "500",
-                      fontSize: "12px",
+                      fontWeight: "400",
+                      fontSize: {
+                        xs: "14px",
+                        md: "16px",
+                      },
                       color: "#7D7D7D",
                       textAlign: "center",
                       fontFamily: "Manrope",
+                      lineHeight: "24px",
                     }}
                   >
                     {data.content}

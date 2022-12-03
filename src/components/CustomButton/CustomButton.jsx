@@ -14,7 +14,6 @@ const CustomButton = ({
 }) => {
   const CustomButton = styled(Button)(({ theme }) => ({
     backgroundColor: backgroundColor,
-    fontFamily: "Manrope",
     color: color,
     minWidth: "104px",
     minHeight: "44px",

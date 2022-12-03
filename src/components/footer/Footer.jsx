@@ -8,28 +8,32 @@ import SocialMediaFooter from "../socialMediaFooter/socialMediaFooter";
 
 export default function Footer() {
   const TextWithIcon = styled("div")(() => ({
-    fontFamily: "manrope",
-    fontWeight: "300",
+    fontFamily: "Manrope",
+    fontWeight: 400,
     fontSize: "12px",
     color: "#E7E7E7",
   }));
 
   const FooterTextLink = styled("p")(() => ({
-    fontWeight: 300,
-    fontSize: "12px",
+    fontWeight: 400,
+    fontSize: "14px",
   }));
 
   return (
     <Container
       component="footer"
       sx={{
-        width: "100%",
-        backgroundColor: "#2E582C",
-        color: "#FFFFFF",
+        maxWidth: {
+          xs: "100%",
+          lg: "100%",
+          xl: "1200px",
+        },
         padding: {
           xs: "32px 24px",
-          md: "32px 40px",
+          md: "32px 80px",
         },
+        backgroundColor: "#2E582C",
+        color: "#FFFFFF",
         display: "flex",
         justifyContent: "space-between",
         flexDirection: {
@@ -59,7 +63,7 @@ export default function Footer() {
           sx={{
             fontFamily: "manrope",
             fontWeight: "300",
-            fontSize: "12px",
+            fontSize: "14px",
             color: "#E7E7E7",
             lineHeight: "24px",
           }}

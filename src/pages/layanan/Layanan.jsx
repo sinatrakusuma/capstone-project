@@ -5,20 +5,32 @@ import HalfImg from "../../components/halfImg/HalfImg";
 import Hero from "../../components/hero/Hero";
 import Navbar from "../../components/navbar/Navbar";
 import CardBackground from "../../components/cardimg/CardBackground";
-import "./layanan.scss";
+import { Container } from "@mui/system";
 
 const Layanan = () => {
   return (
     <div className="container">
       <Navbar />
-      <div className="footer">
+      <Container
+        component="main"
+        sx={{
+          "&.MuiContainer-root": {
+            padding: "0",
+          },
+          maxWidth: {
+            xs: "100%",
+            lg: "100%",
+            xl: "1200px",
+          },
+        }}
+      >
         <Hero />
         <HalfImg />
         {/* <Marticle/> */}
         <Article />
         <CardBackground />
-        <Footer />
-      </div>
+      </Container>
+      <Footer />
     </div>
   );
 };

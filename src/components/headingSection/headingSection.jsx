@@ -6,11 +6,12 @@ export default function HeadingSection({ heading }) {
     <Typography
       variant="h3"
       sx={{
+        fontFamily: "Manrope",
         fontSize: {
           xs: "28px",
           md: "36px",
         },
-        fontWeight: "bold",
+        fontWeight: "700",
         color: "#2E582C",
         my: 1,
         padding: "12px",

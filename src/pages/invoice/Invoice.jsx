@@ -42,11 +42,14 @@ export default function Invoice() {
   }, [orderDataInvoice]);
   return (
     <Container
-      className="container"
+      className="main"
       sx={{
         width: "80%",
         display: "flex",
         justifyContent: "flex-start",
+        "&.MuiContainer-root": {
+          padding: "0",
+        },
       }}
     >
       <Box

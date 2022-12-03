@@ -19,7 +19,7 @@ const Navbar = () => {
       sx={{
         width: {
           xs: "100%",
-          lg: "1200px",
+          xl: "1200px",
         },
         padding: {
           xs: "12px 24px",

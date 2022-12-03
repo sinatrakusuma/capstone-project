@@ -15,7 +15,7 @@ const navbarBrand = () => {
         src={process.env.PUBLIC_URL + "/logo.svg"}
         alt="Dausagi"
       />
-      <h1 className="logo-name">DAUSAGI</h1>
+      <h1 className="logo-name">Dausagi</h1>
     </Box>
   );
 };

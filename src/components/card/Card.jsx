@@ -41,7 +41,7 @@ const Card = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: "5rem",
+        marginBottom: "5rem",
         padding: {
           xs: "0 24px",
           md: "0 80px",

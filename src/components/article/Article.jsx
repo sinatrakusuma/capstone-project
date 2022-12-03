@@ -1,111 +1,100 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { Container } from "@mui/system";
 import React from "react";
+import HeadingSection from "../headingSection/headingSection";
 
-const Article = () => {
-  const CustomBox = styled(Box)(({ theme }) => ({
-    width: "90%",
-    [theme.breakpoints.down("md")]: {
-      width: "85%",
-    },
-  }));
-
+const Article = ({ dataInfo, textHeading }) => {
   return (
-    <Box
+    <Container
       sx={{
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        marginTop: "5rem",
-        justifyContent: "space-evenly",
+        "&.MuiContainer-root": {
+          padding: "0",
+        },
+        minHeight: "400px",
+        margin: "5rem auto",
       }}
     >
-      <Box>
-        <div
-          style={{
+      <Box
+        sx={{
+          padding: {
+            xs: "40px 24px",
+            md: "40px 80px",
+          },
+        }}
+      >
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "column",
-            width: "500px",
+            justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <Typography
-            variant="h3"
-            sx={{
-              fontSize: "35px",
-              fontWeight: "bold",
-              color: "#2E582C",
-              my: 3,
-              padding: "12px",
-              borderTop: "3px solid #CFFE64",
-            }}
-          >
-            Tentang kami
-          </Typography>
-
-          <CustomBox>
-            <Typography
-              variant="body2"
-              sx={{
-                fontSize: "16px",
-                fontWeight: "500",
-                color: "#5A6473",
-                textAlign: "justify",
-              }}
-            >
-              Aplikasi ini dibangun pada tahun 2022 dengan tujuan untuk
-              menyelesaikan atau menjawab solusi dari susahnya menumbuhkan
-              kesadaran masyarakat mengenai sampah sehingga bersikap tidak
-              peduli terhadap lingkungan, dimana sampah dapat menyebabkan
-              berbagai macam bencana sehingga sangat diperlukan kesadaran
-              masyarakat akan sampah ini.
-            </Typography>
-          </CustomBox>
-        </div>
-      </Box>
-      <Box>
-        <div
-          style={{
+          <HeadingSection heading={textHeading} />
+        </Box>
+        <Box
+          sx={{
             display: "flex",
-            flexDirection: "column",
-            width: "500px",
+            flexDirection: {
+              xs: "column",
+              sm: "row",
+            },
             alignItems: "center",
+            justifyContent: "space-between",
+            gap: "24px",
           }}
         >
-          <Typography
-            variant="h3"
-            sx={{
-              fontSize: "35px",
-              fontWeight: "bold",
-              color: "#2E582C",
-              my: 3,
-              padding: "12px",
-              borderTop: "3px solid #CFFE64",
-            }}
-          >
-            Tentang Aplikasi
-          </Typography>
-
-          <CustomBox>
-            <Typography
-              variant="body2"
-              sx={{
-                fontSize: "16px",
-                fontWeight: "500",
-                color: "#5A6473",
-                textAlign: "justify",
-              }}
-            >
-              Aplikasi ini merupakan sebuah aplikasi berbasis web yang
-              dikembangkan untuk memanagement sampah masyarakat dimana ketika
-              melakukan penyetoran sampah akan memberikan feedback seperti saldo
-              sehingga selain menjadikan masyarakat bisa memanagement sampah
-              mereka juga akan mendapat penghasilan dan lingkungan pun terjaga
-              dengan menggunakan aplikasi ini.
-            </Typography>
-          </CustomBox>
-        </div>
+          {dataInfo.map((data) => {
+            return (
+              <Box
+                key={data.title}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "100%",
+                  alignItems: "center",
+                  padding: "24px 12px",
+                }}
+              >
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontFamily: "Manrope",
+                    fontSize: {
+                      xs: "20px",
+                      md: "24px",
+                    },
+                    fontWeight: "700",
+                    color: "#2E582C",
+                    my: 1,
+                    padding: "12px",
+                  }}
+                >
+                  {data.title}
+                </Typography>
+                <Box>
+                  <Typography
+                    sx={{
+                      fontFamily: "Manrope",
+                      fontSize: {
+                        xs: "14px",
+                        md: "16px",
+                      },
+                      lineHeight: "24px",
+                      fontWeight: "400",
+                      color: "#7D7D7D",
+                      textAlign: "center",
+                    }}
+                  >
+                    {data.content}
+                  </Typography>
+                </Box>
+              </Box>
+            );
+          })}
+        </Box>
       </Box>
-    </Box>
+    </Container>
   );
 };
 

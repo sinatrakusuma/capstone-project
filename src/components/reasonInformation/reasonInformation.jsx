@@ -8,87 +8,110 @@ export default function ReasonInformation() {
   return (
     <Container
       sx={{
-        minHeight: "400px",
-        margin: "5rem 0",
-        backgroundColor: "#F5F5F5",
-        padding: {
-          xs: "40px 24px",
-          md: "40px 80px",
+        maxWidth: {
+          xs: "100%",
+          lg: "100%",
+          xl: "1200px",
         },
+        minHeight: "400px",
+        margin: "5rem auto",
+        backgroundColor: "#F5F5F5",
       }}
     >
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
+          width: {
+            xs: "100%",
+            lg: "1200px",
+          },
+          margin: "0 auto",
+          padding: {
+            xs: "40px 24px",
+            md: "40px 80px",
+          },
         }}
       >
-        <HeadingSection heading="Mengapa Dausagi?" />
-      </Box>
-      <Box my={4}>
-        <Grid
-          container
+        <Box
           sx={{
             display: "flex",
-            justifyContent: "space-between",
+            flexDirection: "column",
+            justifyContent: "center",
             alignItems: "center",
-            gap: "24px",
           }}
         >
-          {dataReasonInformation.map((data) => {
-            const { id, title, content, Icon } = data;
-            return (
-              <Grid
-                key={id}
-                item
-                xs={12}
-                md={3}
-                sx={{
-                  display: "flex",
-                  justifyContent: {
-                    xs: "center",
-                    md: "flex-start",
-                  },
-                  alignItems: {
-                    xs: "center",
-                    md: "flex-start",
-                  },
-                  gap: "12px",
-                }}
-              >
-                <Box>
-                  <Icon color="#D0D0D0" size={64} strokeWidth={1} />
-                </Box>
-                <Box>
-                  <Typography
-                    variant="h3"
-                    sx={{
-                      fontSize: {
-                        xs: "20px",
-                        md: "24px",
-                      },
-                      fontWeight: "600",
-                      color: "#4DA247",
-                    }}
-                  >
-                    {title}
-                  </Typography>
-                  <Typography
-                    mt={1}
-                    sx={{
-                      fontSize: "12px",
-                      color: "#7D7D7D",
-                    }}
-                  >
-                    {content}
-                  </Typography>
-                </Box>
-              </Grid>
-            );
-          })}
-        </Grid>
+          <HeadingSection heading="Mengapa Dausagi?" />
+        </Box>
+        <Box my={4}>
+          <Grid
+            container
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "24px",
+            }}
+          >
+            {dataReasonInformation.map((data) => {
+              const { id, title, content, Icon } = data;
+              return (
+                <Grid
+                  key={id}
+                  item
+                  xs={12}
+                  md={3}
+                  sx={{
+                    display: "flex",
+                    justifyContent: {
+                      xs: "center",
+                      md: "flex-start",
+                    },
+                    alignItems: {
+                      xs: "center",
+                      md: "flex-start",
+                    },
+                    gap: "12px",
+                  }}
+                >
+                  <Box>
+                    <Icon color="#D0D0D0" size={64} strokeWidth={1} />
+                  </Box>
+                  <Box>
+                    <Typography
+                      variant="h3"
+                      sx={{
+                        fontFamily: "Manrope",
+                        fontSize: {
+                          xs: "20px",
+                          md: "24px",
+                        },
+                        fontWeight: "600",
+                        color: "#4DA247",
+                      }}
+                    >
+                      {title}
+                    </Typography>
+                    <Typography
+                      mt={1}
+                      sx={{
+                        width: "100%",
+                        fontFamily: "Manrope",
+                        fontWeight: "400",
+                        fontSize: {
+                          xs: "14px",
+                          md: "16px",
+                        },
+                        color: "#7D7D7D",
+                        lineHeight: "24px",
+                      }}
+                    >
+                      {content}
+                    </Typography>
+                  </Box>
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Box>
       </Box>
     </Container>
   );

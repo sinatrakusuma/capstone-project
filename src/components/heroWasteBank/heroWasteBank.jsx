@@ -24,7 +24,6 @@ export default function HeroWasteBank() {
       <Box
         sx={{
           width: "100%",
-
           alignSelf: "flex-end",
         }}
       >
@@ -32,11 +31,14 @@ export default function HeroWasteBank() {
           variant="h3"
           mb={2}
           sx={{
-            fontSize: "40px",
-            fontWeight: "bold",
-            color: "#2E582C",
-            lineHeight: "40px",
             fontFamily: "Manrope",
+            fontSize: {
+              xs: "32px",
+              md: "40px",
+            },
+            fontWeight: "800",
+            color: "#2E582C",
+            lineHeight: "52px",
             textAlign: {
               xs: "center",
               md: "left",
@@ -47,7 +49,10 @@ export default function HeroWasteBank() {
         </Typography>
         <Typography
           sx={{
-            fontSize: "16px",
+            fontSize: {
+              xs: "14px",
+              md: "16px",
+            },
             fontWeight: "400",
             color: "#7D7D7D",
             lineHeight: "24px",
@@ -64,7 +69,10 @@ export default function HeroWasteBank() {
         </Typography>
         <Typography
           sx={{
-            fontSize: "16px",
+            fontSize: {
+              xs: "14px",
+              md: "16px",
+            },
             fontWeight: "400",
             color: "#7D7D7D",
             lineHeight: "24px",

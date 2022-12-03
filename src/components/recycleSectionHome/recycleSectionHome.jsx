@@ -8,7 +8,7 @@ export default function RecycleSectionHome() {
     <Container
       sx={{
         minHeight: "400px",
-        margin: "5rem 0",
+        margin: "5rem auto",
         padding: {
           xs: "40px 24px",
           md: "40px 80px",
@@ -47,6 +47,7 @@ export default function RecycleSectionHome() {
       <Box
         sx={{
           width: "100%",
+          padding: "0 24px",
         }}
       >
         <Typography
@@ -71,7 +72,10 @@ export default function RecycleSectionHome() {
         </Typography>
         <Typography
           sx={{
-            fontSize: "16px",
+            fontSize: {
+              xs: "14px",
+              md: "16px",
+            },
             fontWeight: "400",
             color: "#7D7D7D",
             lineHeight: "24px",

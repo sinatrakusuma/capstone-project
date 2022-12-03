@@ -14,93 +14,118 @@ export default function SectionWasteInfo({
   return (
     <Container
       sx={{
-        minHeight: "400px",
-        margin: "5rem 0",
-        backgroundColor: `${background}`,
-        padding: {
-          xs: "40px 24px",
-          md: "40px 80px",
+        maxWidth: {
+          xs: "100%",
+          lg: "100%",
+          xl: "1200px",
         },
+        minHeight: "400px",
+        margin: "5rem auto",
+        backgroundColor: `${background}`,
       }}
     >
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
+          width: {
+            xs: "100%",
+            lg: "1200px",
+          },
+          margin: "0 auto",
+          padding: {
+            xs: "40px 24px",
+            md: "40px 80px",
+          },
         }}
       >
-        <HeadingSection heading={heading} />
-        <HeadingHelperText helperText={helperText} />
-      </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <HeadingSection heading={heading} />
+          <HeadingHelperText helperText={helperText} />
+        </Box>
 
-      <Grid
-        container
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: "24px",
-        }}
-      >
-        {dataInfo.map((data) => {
-          return (
-            <Grid
-              key={data.category}
-              item
-              xs={12}
-              md={3}
-              mt={2}
-              sx={{
-                width: "100%",
-                display: "flex",
-                flexDirection: `${direction}`,
-                justifyContent: {
-                  xs: "center",
-                  md: "flex-start",
-                },
-                alignItems: {
-                  xs: "center",
-                  md: "flex-start",
-                },
-                gap: "12px",
-              }}
-            >
-              <Box>
-                <Typography
-                  variant="h3"
-                  sx={{
-                    minWidth: "80px",
-                    fontSize: {
-                      xs: "18px",
-                      md: "20px",
-                    },
-                    fontWeight: "600",
-                    color: "#4DA247",
-                  }}
-                >
-                  {data.category}
-                </Typography>
-              </Box>
-              <Box>
-                <Typography
-                  sx={{
-                    fontSize: "12px",
-                    color: "#7D7D7D",
-                    textAlign: {
-                      xs: "center",
-                      md: "left",
-                    },
-                  }}
-                >
-                  {data.info}
-                </Typography>
-              </Box>
-            </Grid>
-          );
-        })}
-      </Grid>
+        <Grid
+          container
+          sx={{
+            display: "flex",
+
+            justifyContent: {
+              xs: "space-between",
+              sm: "center",
+              md: "space-between",
+            },
+            alignItems: "center",
+            gap: "24px",
+          }}
+        >
+          {dataInfo.map((data) => {
+            return (
+              <Grid
+                key={data.category}
+                item
+                xs={12}
+                sm={4}
+                md={3}
+                mt={2}
+                sx={{
+                  maxWidth: "100%",
+                  minHeight: {
+                    xs: "auto",
+                    md: "140px",
+                  },
+                  display: "flex",
+                  flexDirection: `${direction}`,
+                  justifyContent: {
+                    xs: "center",
+                    sm: "flex-start",
+                  },
+                  alignItems: {
+                    xs: "center",
+                    sm: "flex-start",
+                  },
+                  gap: "12px",
+                }}
+              >
+                <Box>
+                  <Typography
+                    variant="h3"
+                    sx={{
+                      minWidth: "80px",
+                      fontSize: {
+                        xs: "18px",
+                        md: "20px",
+                      },
+                      fontWeight: "600",
+                      color: "#4DA247",
+                    }}
+                  >
+                    {data.category}
+                  </Typography>
+                </Box>
+                <Box>
+                  <Typography
+                    sx={{
+                      fontSize: "12px",
+                      color: "#7D7D7D",
+                      textAlign: {
+                        xs: "center",
+                        sm: "left",
+                      },
+                    }}
+                  >
+                    {data.info}
+                  </Typography>
+                </Box>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Box>
     </Container>
   );
 }

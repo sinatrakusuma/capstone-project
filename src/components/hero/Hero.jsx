@@ -19,13 +19,15 @@ const Hero = () => {
   }));
 
   const Title = styled(Typography)(({ theme }) => ({
+    fontFamily: "Manrope",
     fontSize: "40px",
     width: "100%",
-    color: "#000336",
-    fontWeight: "700",
+    color: "#2E582C",
+    lineHeight: "52px",
+    fontWeight: "800",
     margin: theme.spacing(2, 0, 2, 0),
     [theme.breakpoints.down("sm")]: {
-      fontSize: "40px",
+      fontSize: "32px",
     },
   }));
 
@@ -53,7 +55,11 @@ const Hero = () => {
           <Typography
             variant="body2"
             sx={{
-              fontSize: "16px",
+              fontFamily: "Manrope",
+              fontSize: {
+                xs: "14px",
+                md: "16px",
+              },
               color: "#7D7D7D",
               my: 2,
               marginBottom: "32px",

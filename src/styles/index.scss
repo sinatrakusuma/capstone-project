@@ -2,9 +2,31 @@
 
 @import "./modules/navbar";
 @import "./modules/footer";
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Manrope', sans-serif;
+}
+#root{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    font-family: 'Manrope', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.about-logo-section{
+    width: 150px;
 }

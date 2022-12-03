@@ -6,12 +6,15 @@ export default function HeadingHelperText({ helperText }) {
     <Typography
       variant="body2"
       sx={{
-        fontSize: "16px",
-        fontWeight: "500",
+        fontFamily: "Manrope",
+        fontSize: {
+          xs: "14px",
+          md: "16px",
+        },
+        fontWeight: "400",
         color: "#5A6473",
         textAlign: "center",
         marginBottom: "3rem",
-        fontFamily: "Manrope",
       }}
     >
       {helperText}

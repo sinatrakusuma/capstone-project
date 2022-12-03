@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
 import FormButton from "./FormButton";
 import CONFIG from "../../global/config";
+import HeadingSection from "../headingSection/headingSection";
 
 const steps = ["Biodata", "Data Sampah", "Konfirmasi"];
 
@@ -54,28 +55,29 @@ export default function Checkout() {
             xs: "100%",
             md: "80%",
           },
-          mb: 4,
-          padding: {
-            xs: "40px 24px",
-            md: "40px 80px",
-          },
+          margin: "5rem auto",
         }}
       >
         <Paper
           variant="outlined"
-          sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}
+          sx={{
+            my: { xs: 3, md: 6 },
+            padding: {
+              xs: "40px 24px",
+              md: "40px 80px",
+            },
+          }}
         >
-          <Typography
-            component="h1"
-            variant="h4"
-            align="center"
+          <Box
             sx={{
-              marginBottom: "32px",
-              color: "#2E582C",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            Tukarkan Sampahmu Disini
-          </Typography>
+            <HeadingSection heading="Tukarkan Sampahmu" />
+          </Box>
           <Stepper
             activeStep={activeStep}
             sx={{
