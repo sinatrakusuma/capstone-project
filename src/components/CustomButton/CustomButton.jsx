@@ -1,6 +1,5 @@
-import { Button, styled } from "@mui/material";
 import React from "react";
-import PropTypes from "prop-types";
+import { Button, styled } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const CustomButton = ({
@@ -49,15 +48,6 @@ const CustomButton = ({
       <Link to={navigation}>{textButton}</Link>
     </CustomButton>
   );
-};
-
-CustomButton.propTypes = {
-  backgroundColor: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  textButton: PropTypes.string.isRequired,
-  generalBtn: PropTypes.bool.isRequired,
-  specialBtn: PropTypes.bool.isRequired,
-  moreBtn: PropTypes.bool.isRequired,
 };
 
 export default CustomButton;

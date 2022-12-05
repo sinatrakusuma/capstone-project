@@ -1,5 +1,4 @@
 import React from "react";
-import Article from "../../components/article/Article";
 import Footer from "../../components/footer/footer";
 import HalfImg from "../../components/halfImg/HalfImg";
 import Hero from "../../components/hero/heroHome";
@@ -7,7 +6,7 @@ import Navbar from "../../components/navbar/navbar";
 import CardBackground from "../../components/cardimg/CardBackground";
 import { Container } from "@mui/system";
 
-const Layanan = () => {
+export default function Services() {
   return (
     <div className="container">
       <Navbar />
@@ -26,13 +25,9 @@ const Layanan = () => {
       >
         <Hero />
         <HalfImg />
-        {/* <Marticle/> */}
-        <Article />
         <CardBackground />
       </Container>
       <Footer />
     </div>
   );
-};
-
-export default Layanan;
+}

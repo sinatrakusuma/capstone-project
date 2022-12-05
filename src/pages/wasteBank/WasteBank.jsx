@@ -8,7 +8,7 @@ import dataWasteCategory from "../../data/dataWasteCategory";
 import dataStepSwapWaste from "../../data/dataStepSwapTrash";
 import { Container } from "@mui/system";
 
-const BankSampah = () => {
+export default function WasteBank() {
   return (
     <div className="container">
       <Navbar />
@@ -45,6 +45,4 @@ const BankSampah = () => {
       <Footer />
     </div>
   );
-};
-
-export default BankSampah;
+}

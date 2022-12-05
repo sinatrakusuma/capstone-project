@@ -18,7 +18,7 @@ const dataReasonInformation = [
     Icon: HiOutlineHandThumbUp,
   },
   {
-    id: "1",
+    id: "3",
     title: "Aman",
     content: "Kamu hanya perlu masuk website bisa di mana pun dan kapan pun",
     Icon: HiOutlineShieldCheck,

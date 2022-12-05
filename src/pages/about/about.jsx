@@ -8,7 +8,8 @@ import HeroAboutUs from "../../components/hero/heroAboutUs";
 import dataVisiMisi from "../../data/dataVisiMisi";
 import { Typography } from "@mui/material";
 import HeadingSectionText from "../../components/headingSectionText/headingSectionText";
-const Kontak = () => {
+
+const About = () => {
   return (
     <div className="container">
       <Navbar />
@@ -68,4 +69,4 @@ const Kontak = () => {
   );
 };
 
-export default Kontak;
+export default About;

@@ -1,8 +1,7 @@
-import { Box, styled} from "@mui/material";
+import { Box, styled } from "@mui/material";
 import React from "react";
-import PropTypes from "prop-types";
 
-const Cardimg = ({backgroundImage}) => {
+const Cardimg = ({ backgroundImage }) => {
   const Cardimg = styled(Box)(() => ({
     backgroundImage: backgroundImage,
     backgroundSize: "cover",
@@ -19,10 +18,6 @@ const Cardimg = ({backgroundImage}) => {
     transition: "filter 200ms linear, transform 200ms linear",
   }));
   return <Cardimg className="card__background"></Cardimg>;
-};
-
-Cardimg.propTypes = {
-  textButton: PropTypes.string.isRequired,
 };
 
 export default Cardimg;
