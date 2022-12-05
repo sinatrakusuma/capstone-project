@@ -4,11 +4,12 @@ import PropTypes from "prop-types";
 
 const ContentCustom = ({ Image }) => {
   const ContentCustom = styled(Box)(() => ({
-    width: "280px",
-    height: "150px",
-    borderRadius: "55px",
+    width: "100%",
+    height: "85px",
+    borderRadius: "12px",
     backgroundImage: Image,
     backgroundSize: "cover",
+    backgroundPosition: "center",
   }));
 
   return <ContentCustom></ContentCustom>;

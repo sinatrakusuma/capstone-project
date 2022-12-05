@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
 import FormButton from "./FormButton";
 import CONFIG from "../../global/config";
+import HeadingSectionText from "../headingSectionText/headingSectionText";
 
 const steps = ["Biodata", "Data Sampah", "Konfirmasi"];
 
@@ -54,28 +55,20 @@ export default function Checkout() {
             xs: "100%",
             md: "80%",
           },
-          mb: 4,
-          padding: {
-            xs: "24px",
-            sm: "24px 0",
-          },
+          margin: "5rem auto",
         }}
       >
         <Paper
           variant="outlined"
-          sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}
+          sx={{
+            my: { xs: 3, md: 6 },
+            padding: {
+              xs: "40px 24px",
+              md: "40px 80px",
+            },
+          }}
         >
-          <Typography
-            component="h1"
-            variant="h4"
-            align="center"
-            sx={{
-              marginBottom: "32px",
-              color:"#2E582C"
-            }}
-          >
-            Tukarkan Sampahmu Disini
-          </Typography>
+          <HeadingSectionText headingText="Tukarkan Sampahmu" />
           <Stepper
             activeStep={activeStep}
             sx={{
@@ -88,10 +81,10 @@ export default function Checkout() {
                 key={label}
                 sx={{
                   "& .MuiStepLabel-root .Mui-completed": {
-                    color: "#4B6F49", // circle color (COMPLETED)
+                    color: "#4B6F49",
                   },
                   "& .MuiStepLabel-root .Mui-active": {
-                    color: "#4B6F49", // circle color (ACTIVE)
+                    color: "#4B6F49",
                   },
                 }}
               >

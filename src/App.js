@@ -1,10 +1,10 @@
-import Kontak from "./pages/kontak/Kontak";
+import Kontak from "./pages/about/about";
 import Home from "./pages/home/Home";
-import DaurUlang from "./pages/daur ulang/DaurUlang";
-import Layanan from "./pages/layanan/Layanan";
+import DaurUlang from "./pages/recycle/recycle";
+import Layanan from "./pages/services/services";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import BankSampah from "./pages/bank sampah/BankSampah";
+import BankSampah from "./pages/bankSampah/bankSampah";
 import Invoice from "./pages/invoice/Invoice";
 
 function App() {

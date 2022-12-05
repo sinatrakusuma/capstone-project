@@ -36,18 +36,20 @@ export default function Invoice() {
 
   React.useEffect(() => {
     const orderData = JSON.parse(localStorage.getItem("DATA_ORDER_STORAGE"));
-    console.log(orderData);
     if (orderData) {
       setOrderDataInvoice(orderData);
     }
   }, [orderDataInvoice]);
   return (
     <Container
-      className="container"
+      className="main"
       sx={{
         width: "80%",
         display: "flex",
         justifyContent: "flex-start",
+        "&.MuiContainer-root": {
+          padding: "0",
+        },
       }}
     >
       <Box

@@ -10,7 +10,17 @@ import { Box } from "@mui/system";
 export default function Review({ orderData }) {
   return (
     <React.Fragment>
-      <Typography variant="h6" gutterBottom>
+      <Typography
+        variant="h6"
+        gutterBottom
+        sx={{
+          fontFamily: "Manrope",
+          textAlign: "center",
+          fontSize: "28px",
+          fontWeight: "700",
+          color: "#2E582C",
+        }}
+      >
         Review Order
       </Typography>
       <List disablePadding>

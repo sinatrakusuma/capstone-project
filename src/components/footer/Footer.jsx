@@ -2,21 +2,20 @@ import React from "react";
 import { styled } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import FooterLink from "../footerLink/footerLink";
-import NavbarBrand from "../navbarBrand/navbarBrand";
-import SocialMediaFooter from "../socialMediaFooter/socialMediaFooter";
-import "./footer.scss";
+import FooterLink from "./footerLink";
+import NavbarBrand from "../navbar/navbarBrand";
+import SocialMediaFooter from "./socialMediaFooter";
 
 export default function Footer() {
   const TextWithIcon = styled("div")(() => ({
-    fontFamily: "manrope",
-    fontWeight: "300",
-    fontSize: "14px",
+    fontFamily: "Manrope",
+    fontWeight: 400,
+    fontSize: "12px",
     color: "#E7E7E7",
   }));
 
   const FooterTextLink = styled("p")(() => ({
-    fontWeight: 300,
+    fontWeight: 400,
     fontSize: "14px",
   }));
 
@@ -24,13 +23,17 @@ export default function Footer() {
     <Container
       component="footer"
       sx={{
-        width: "100%",
-        backgroundColor: "#172D15",
-        color: "#FFFFFF",
+        maxWidth: {
+          xs: "100%",
+          lg: "100%",
+          xl: "1200px",
+        },
         padding: {
           xs: "32px 24px",
-          md: "32px 40px",
+          md: "32px 80px",
         },
+        backgroundColor: "#2E582C",
+        color: "#FFFFFF",
         display: "flex",
         justifyContent: "space-between",
         flexDirection: {
@@ -38,7 +41,10 @@ export default function Footer() {
           md: "row",
         },
         alignItems: "flex-start",
-        gap: "24px",
+        gap: {
+          xs: "32px",
+          md: "24px",
+        },
       }}
     >
       <Box
@@ -59,6 +65,7 @@ export default function Footer() {
             fontWeight: "300",
             fontSize: "14px",
             color: "#E7E7E7",
+            lineHeight: "24px",
           }}
         >
           DAUSAGI merupakan Platform Bank sampah digital untuk membantu dan

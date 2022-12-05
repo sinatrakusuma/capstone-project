@@ -1,9 +1,8 @@
 import React from "react";
-import NavbarBrand from "../navbarBrand/navbarBrand";
-import NavbarLink from "../navbarLink/navbarLink";
+import NavbarBrand from "./navbarBrand";
+import NavbarLink from "./navbarLink";
 import { AppBar, Box } from "@mui/material";
 import { HiBars3BottomLeft } from "react-icons/hi2";
-import "./navbar.scss";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -18,7 +17,10 @@ const Navbar = () => {
     <AppBar
       position="sticky"
       sx={{
-        width: "100%",
+        width: {
+          xs: "100%",
+          xl: "1200px",
+        },
         padding: {
           xs: "12px 24px",
           md: "12px 40px",
