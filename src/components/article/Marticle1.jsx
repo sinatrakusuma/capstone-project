@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Ctypo from "../Ctypo/Ctypo";
-import Cimg from "../Cimg/Cimg";
+import Ctypo from "../cTypo/cTypo";
+import Cimg from "../cImg/cImg";
 const Marticle = () => {
   return (
     <Box
@@ -29,7 +29,13 @@ const Marticle = () => {
             justifyContent: "space-around",
           }}
         >
-          <Cimg width="460px" height="306px" backgroundSize="cover" backgroudImage="url(./10.jpg)" borderRadius="20px" />
+          <Cimg
+            width="460px"
+            height="306px"
+            backgroundSize="cover"
+            backgroudImage="url(./10.jpg)"
+            borderRadius="20px"
+          />
           {/* <div
             style={{
               width: "460px",
@@ -65,7 +71,14 @@ const Marticle = () => {
                 }}
               >
                 <div>
-                  <Ctypo textButton="Sampah Yang Bisa di daur ulang" fontSize="1.5rem" fontWeight="bold" color="#2E582C" my="1" variant="body2" />
+                  <Ctypo
+                    textButton="Sampah Yang Bisa di daur ulang"
+                    fontSize="1.5rem"
+                    fontWeight="bold"
+                    color="#2E582C"
+                    my="1"
+                    variant="body2"
+                  />
                   {/* <Typography variant="h3" sx={{ fontSize: "1.5rem", fontWeight: "bold", color: "#2E582C", my: 1 }}>
                     Sampah Yang Bisa di daur ulang
                   </Typography> */}
@@ -106,7 +119,14 @@ const Marticle = () => {
                 }}
               >
                 <div>
-                  <Ctypo textButton="Sampah yang tidak bisa didaur ulang" fontSize="1.5rem" fontWeight="bold" color="#2E582C" my="1" variant="body2" />
+                  <Ctypo
+                    textButton="Sampah yang tidak bisa didaur ulang"
+                    fontSize="1.5rem"
+                    fontWeight="bold"
+                    color="#2E582C"
+                    my="1"
+                    variant="body2"
+                  />
                   {/* <Typography variant="h3" sx={{ fontSize: "1.5rem", fontWeight: "bold", color: "#2E582C", my: 1 }}>
                     Sampah yang tidak bisa didaur ulang
                   </Typography> */}

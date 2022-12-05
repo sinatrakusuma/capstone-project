@@ -2,9 +2,9 @@ import React from "react";
 import { styled } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import FooterLink from "../footerLink/footerLink";
-import NavbarBrand from "../navbarBrand/navbarBrand";
-import SocialMediaFooter from "../socialMediaFooter/socialMediaFooter";
+import FooterLink from "./footerLink";
+import NavbarBrand from "../navbar/navbarBrand";
+import SocialMediaFooter from "./socialMediaFooter";
 
 export default function Footer() {
   const TextWithIcon = styled("div")(() => ({

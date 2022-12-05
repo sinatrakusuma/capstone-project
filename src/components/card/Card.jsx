@@ -3,7 +3,6 @@ import React from "react";
 import Cards from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import "./card.scss";
 import { Container } from "@mui/system";
 
 const Card = () => {

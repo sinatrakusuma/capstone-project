@@ -1,6 +1,6 @@
 import React from "react";
-import NavbarBrand from "../navbarBrand/navbarBrand";
-import NavbarLink from "../navbarLink/navbarLink";
+import NavbarBrand from "./navbarBrand";
+import NavbarLink from "./navbarLink";
 import { AppBar, Box } from "@mui/material";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 

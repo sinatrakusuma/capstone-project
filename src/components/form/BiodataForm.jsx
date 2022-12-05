@@ -10,9 +10,11 @@ export default function BiodataForm({ orderData, setOrderData }) {
         variant="h6"
         gutterBottom
         sx={{
+          fontFamily: "Manrope",
           textAlign: "center",
-          fontSize: "32px",
+          fontSize: "28px",
           fontWeight: "700",
+          color: "#2E582C",
         }}
       >
         Data Diri

@@ -3,17 +3,9 @@ import { Box, styled, Typography } from "@mui/material";
 import ContentCustom from "./ContentCustom";
 import { Container } from "@mui/system";
 import dataContentServicesHome from "../../data/dataContentServicesHome";
-import HeadingSection from "../headingSection/headingSection";
-import HeadingHelperText from "../headingHelperText/headingHelperText";
+import HeadingSectionText from "../headingSectionText/headingSectionText";
 
 const Guide = () => {
-  const CustomBox = styled(Box)(({ theme }) => ({
-    width: "40%",
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
-    },
-  }));
-
   const GuidesBox = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "space-between",
@@ -59,10 +51,10 @@ const Guide = () => {
           margin: "5rem 0",
         }}
       >
-        <HeadingSection heading="Layanan Kami" />
-        <CustomBox>
-          <HeadingHelperText helperText="Berikut merupakan layanan yang ada di Dausagi" />
-        </CustomBox>
+        <HeadingSectionText
+          headingText="Layanan Kami"
+          helperText="Berikut merupakan layanan yang ada di Dausagi"
+        />
 
         <GuidesBox>
           {dataContentServicesHome.map((data) => {
@@ -98,8 +90,8 @@ const Guide = () => {
                     sx={{
                       fontWeight: "400",
                       fontSize: {
-                        xs: "14px",
-                        md: "16px",
+                        xs: "12px",
+                        md: "14px",
                       },
                       color: "#7D7D7D",
                       textAlign: "center",

@@ -1,13 +1,12 @@
 import React from "react";
 import { Container, Box } from "@mui/system";
-import HeadingSection from "../../components/headingSection/headingSection";
-import HeadingHelperText from "../../components/headingHelperText/headingHelperText";
+import HeadingSectionText from "../headingSectionText/headingSectionText";
 import { Grid, Typography } from "@mui/material";
 
 export default function SectionWasteInfo({
   dataInfo,
   direction,
-  heading,
+  headingText,
   helperText,
   background,
 }) {
@@ -37,17 +36,7 @@ export default function SectionWasteInfo({
           },
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <HeadingSection heading={heading} />
-          <HeadingHelperText helperText={helperText} />
-        </Box>
+        <HeadingSectionText headingText={headingText} helperText={helperText} />
 
         <Grid
           container
@@ -95,6 +84,7 @@ export default function SectionWasteInfo({
                   <Typography
                     variant="h3"
                     sx={{
+                      fontFamily: "Manrope",
                       minWidth: "80px",
                       fontSize: {
                         xs: "18px",
@@ -110,7 +100,12 @@ export default function SectionWasteInfo({
                 <Box>
                   <Typography
                     sx={{
-                      fontSize: "12px",
+                      fontSize: {
+                        fontFamily: "Manrope",
+                        xs: "12px",
+                        md: "14px",
+                      },
+                      fontWeight: 400,
                       color: "#7D7D7D",
                       textAlign: {
                         xs: "center",

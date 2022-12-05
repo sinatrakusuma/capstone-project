@@ -1,8 +1,8 @@
 import React from "react";
 import { Container } from "@mui/system";
 import { Typography, Box, Grid } from "@mui/material";
-import HeadingSection from "../headingSection/headingSection";
 import dataReasonInformation from "../../data/dataReasonInformation";
+import HeadingSectionText from "../headingSectionText/headingSectionText";
 
 export default function ReasonInformation() {
   return (
@@ -31,17 +31,8 @@ export default function ReasonInformation() {
           },
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <HeadingSection heading="Mengapa Dausagi?" />
-        </Box>
-        <Box my={4}>
+        <HeadingSectionText headingText="Mengapa Dausagi" />
+        <Box mb={4}>
           <Grid
             container
             sx={{
@@ -97,8 +88,8 @@ export default function ReasonInformation() {
                         fontFamily: "Manrope",
                         fontWeight: "400",
                         fontSize: {
-                          xs: "14px",
-                          md: "16px",
+                          xs: "12px",
+                          md: "14px",
                         },
                         color: "#7D7D7D",
                         lineHeight: "24px",

@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
-import HeadingSection from "../headingSection/headingSection";
+import HeadingSectionText from "../headingSectionText/headingSectionText";
 
 const Article = ({ dataInfo, textHeading }) => {
   return (
@@ -22,16 +22,7 @@ const Article = ({ dataInfo, textHeading }) => {
           },
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <HeadingSection heading={textHeading} />
-        </Box>
+        <HeadingSectionText headingText={textHeading} />
         <Box
           sx={{
             display: "flex",

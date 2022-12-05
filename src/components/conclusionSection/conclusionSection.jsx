@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container } from "@mui/system";
 import { Typography } from "@mui/material";
-import CustomButton from "../../components/CustomButton/CustomButton";
+import CustomButton from "../../components/customButton/customButton";
 
 export default function ConclusionSection() {
   return (

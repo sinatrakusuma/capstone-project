@@ -1,7 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 
-export default function HeadingSection({ heading }) {
+export default function HeadingText({ headingText }) {
   return (
     <Typography
       variant="h3"
@@ -18,7 +18,7 @@ export default function HeadingSection({ heading }) {
         borderTop: "3px solid #CFFE64",
       }}
     >
-      {heading}
+      {headingText}
     </Typography>
   );
 }

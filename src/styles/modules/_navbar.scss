@@ -11,12 +11,14 @@ header{
     .navigation {
         display: none;
         .link {
-            font-size: 12px;
+            font-family: "Manrope";
+            font-size: 14px;
             color: #7D7D7D;
             margin: 14px;
             text-transform: capitalize;
             padding: 8px 0;
             border-bottom: 2px solid transparent;
+            font-weight: 400;
     
             &.active {
                 border-bottom: 2px solid #2E582C;

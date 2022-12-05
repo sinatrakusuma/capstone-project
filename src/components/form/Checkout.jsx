@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
 import FormButton from "./FormButton";
 import CONFIG from "../../global/config";
-import HeadingSection from "../headingSection/headingSection";
+import HeadingSectionText from "../headingSectionText/headingSectionText";
 
 const steps = ["Biodata", "Data Sampah", "Konfirmasi"];
 
@@ -68,16 +68,7 @@ export default function Checkout() {
             },
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <HeadingSection heading="Tukarkan Sampahmu" />
-          </Box>
+          <HeadingSectionText headingText="Tukarkan Sampahmu" />
           <Stepper
             activeStep={activeStep}
             sx={{
@@ -90,10 +81,10 @@ export default function Checkout() {
                 key={label}
                 sx={{
                   "& .MuiStepLabel-root .Mui-completed": {
-                    color: "#4B6F49", // circle color (COMPLETED)
+                    color: "#4B6F49",
                   },
                   "& .MuiStepLabel-root .Mui-active": {
-                    color: "#4B6F49", // circle color (ACTIVE)
+                    color: "#4B6F49",
                   },
                 }}
               >

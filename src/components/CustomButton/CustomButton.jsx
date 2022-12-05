@@ -14,11 +14,12 @@ const CustomButton = ({
 }) => {
   const CustomButton = styled(Button)(({ theme }) => ({
     backgroundColor: backgroundColor,
+    fontFamily: "Manrope",
     color: color,
     minWidth: "104px",
     minHeight: "44px",
-    fontWeight: "800",
-    fontSize: "12px",
+    fontWeight: "600",
+    fontSize: "14px",
     cursor: "pointer",
     padding: "0.5rem 1.25rem",
     borderRadius: "4px",
