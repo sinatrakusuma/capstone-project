@@ -24,5 +24,5 @@ export default function HelperText({ helperText }) {
 }
 
 HelperText.propTypes = {
-  helperText: PropTypes.string.isRequired,
+  helperText: PropTypes.string,
 };

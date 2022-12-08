@@ -97,7 +97,7 @@ const Article = ({ dataInfo, textHeading, helperText }) => {
 Article.propTypes = {
   dataInfo: PropTypes.array.isRequired,
   textHeading: PropTypes.string.isRequired,
-  helperText: PropTypes.string.isRequired,
+  helperText: PropTypes.string,
 };
 
 export default Article;

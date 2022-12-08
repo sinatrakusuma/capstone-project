@@ -18,21 +18,18 @@ header{
             text-transform: capitalize;
             padding: 8px 0;
             border-bottom: 2px solid transparent;
+            transition: border-bottom 0.1s;
+            -webkit-transition: border-bottom 0.2s;
             font-weight: 400;
     
-            &.active {
-                border-bottom: 2px solid #2E582C;
-                color: #2E582C;
-                transition: border-bottom 0.1s;
-                -webkit-transition: border-bottom 0.2s;
-            }
             &:hover {
                 border-bottom: 2px solid #2E582C;
                 color: #2E582C;
-                transition: border-bottom 0.1s;
-                -webkit-transition: border-bottom 0.2s;
             }
-    
+        }
+        .link-active{
+            border-bottom: 2px solid #2E582C;
+            color: #2E582C;
         }
         .contactBtn {
             font-size: 12px;

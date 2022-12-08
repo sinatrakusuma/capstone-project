@@ -6,6 +6,7 @@ export default function HeroWasteBank() {
   return (
     <Container
       sx={{
+        position: "relative",
         minHeight: "400px",
         padding: {
           xs: "40px 24px",
@@ -18,7 +19,7 @@ export default function HeroWasteBank() {
           md: "row",
         },
         alignItems: "center",
-        gap: 8,
+        gap: "24px",
       }}
     >
       <Box

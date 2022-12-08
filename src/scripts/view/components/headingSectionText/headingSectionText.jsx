@@ -21,6 +21,6 @@ export default function HeadingSectionText({ headingText, helperText }) {
 }
 
 HeadingSectionText.propTypes = {
-  headingText: PropTypes.string.isRequired,
-  helperText: PropTypes.string.isRequired,
+  headingText: PropTypes.string,
+  helperText: PropTypes.string,
 };

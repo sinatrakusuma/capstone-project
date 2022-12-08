@@ -1,10 +1,16 @@
 import React from "react";
 import { Box } from "@mui/material";
 import navbarLinkItem from "../../../data/navbarLinkItem";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import CustomButton from "../customButton/customButton";
+import { useState, useEffect } from "react";
 
 export default function NavbarLink() {
+  const location = useLocation(); // once ready it returns the 'window.location' object
+  const [url, setUrl] = useState(null);
+  useEffect(() => {
+    setUrl(location.pathname);
+  }, [location]);
   return (
     <Box
       sx={{
@@ -42,7 +48,11 @@ export default function NavbarLink() {
     >
       {navbarLinkItem.map((navigation, index) => {
         return (
-          <Link to={navigation.to} key={index} className="link">
+          <Link
+            to={navigation.to}
+            key={index}
+            className={url === navigation.to ? "link-active link" : "link"}
+          >
             {navigation.link}
           </Link>
         );

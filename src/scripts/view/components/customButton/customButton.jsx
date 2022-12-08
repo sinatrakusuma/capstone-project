@@ -52,13 +52,13 @@ const CustomButton = ({
 };
 
 CustomButton.propTypes = {
-  backgroundColor: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  textButton: PropTypes.string.isRequired,
-  generalBtn: PropTypes.bool.isRequired,
-  specialBtn: PropTypes.bool.isRequired,
-  moreBtn: PropTypes.bool.isRequired,
-  navigation: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string,
+  color: PropTypes.string,
+  textButton: PropTypes.string,
+  generalBtn: PropTypes.bool,
+  specialBtn: PropTypes.bool,
+  moreBtn: PropTypes.bool,
+  navigation: PropTypes.string,
 };
 
 export default CustomButton;
