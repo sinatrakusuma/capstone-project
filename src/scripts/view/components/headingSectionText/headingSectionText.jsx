@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import HeadingText from "./headingText";
 import HelperText from "./helperText";
+import PropTypes from "prop-types";
 
 export default function HeadingSectionText({ headingText, helperText }) {
   return (
@@ -18,3 +19,8 @@ export default function HeadingSectionText({ headingText, helperText }) {
     </Box>
   );
 }
+
+HeadingSectionText.propTypes = {
+  headingText: PropTypes.string.isRequired,
+  helperText: PropTypes.string.isRequired,
+};

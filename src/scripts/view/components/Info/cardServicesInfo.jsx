@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
+import PropTypes from "prop-types";
 
 export default function CardInfo({ number, title, content }) {
   return (
@@ -75,3 +76,9 @@ export default function CardInfo({ number, title, content }) {
     </Box>
   );
 }
+
+CardInfo.propTypes = {
+  number: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+};

@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container } from "@mui/system";
 import HeadingSectionText from "../headingSectionText/headingSectionText";
-import CardInfo from "./cardServicesInfo";
+import CardInfo from "../Info/cardServicesInfo";
 
 const servicesInfo = () => {
   return (

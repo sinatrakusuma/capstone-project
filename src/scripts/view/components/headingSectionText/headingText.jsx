@@ -1,5 +1,6 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
 
 export default function HeadingText({ headingText }) {
   return (
@@ -23,3 +24,7 @@ export default function HeadingText({ headingText }) {
     </Typography>
   );
 }
+
+HeadingText.propTypes = {
+  headingText: PropTypes.string.isRequired,
+};

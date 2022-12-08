@@ -4,20 +4,61 @@
         "es2021": true,
         "node": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
+    "extends": ["eslint:recommended", "plugin:react/recommended","google"],
     "overrides": [
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+          }
     },
     "plugins": [
         "react"
     ],
+    "settings": {
+        "react": {
+          "createClass": "createReactClass",                          
+          "pragma": "React",  
+          "fragment": "Fragment",  
+          "version": "detect", 
+          "flowVersion": "0.53" 
+        },
+        "propWrapperFunctions": [
+            "forbidExtraProps",
+            {"property": "freeze", "object": "Object"},
+            {"property": "myFavoriteWrapper"},
+            {"property": "forbidExtraProps", "exact": true}
+        ],
+        "componentWrapperFunctions": [
+            "observer",
+            {"property": "styled"}, 
+            {"property": "observer", "object": "Mobx"},
+            {"property": "observer", "object": "<pragma>"} 
+        ],
+        "formComponents": [
+          "CustomForm",
+          {"name": "Form", "formAttribute": "endpoint"}
+        ],
+        "linkComponents": [
+          "Hyperlink",
+          {"name": "Link", "linkAttribute": "to"}
+        ]
+      },
     "rules": {
-        "react/prop-types": "off"
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "require-jsdoc": 0,
+        "quotes" : ["error", "double"],
+        "no-console" : 0,
+        "new-cap": 0,
+        "no-alert" : 0,
+        "no-underscore-dangling" : 0,
+        "indent" : [1,2],
+        "max-len": ["error", { "code": 2000 }],
+        "linebreak-style": ["error", "windows"],
+        "object-curly-spacing": [2, "always"],
+        "quote-props": ["error", "as-needed", { "keywords": true }]
     }
 }

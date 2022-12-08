@@ -58,6 +58,7 @@ CustomButton.propTypes = {
   generalBtn: PropTypes.bool.isRequired,
   specialBtn: PropTypes.bool.isRequired,
   moreBtn: PropTypes.bool.isRequired,
+  navigation: PropTypes.string.isRequired,
 };
 
 export default CustomButton;

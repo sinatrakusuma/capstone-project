@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Box } from "@mui/system";
 import HeadingSectionText from "../headingSectionText/headingSectionText";
 import { Grid, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 
 export default function SectionWasteInfo({
   dataInfo,
@@ -119,3 +120,11 @@ export default function SectionWasteInfo({
     </Container>
   );
 }
+
+SectionWasteInfo.propTypes = {
+  dataInfo: PropTypes.object.isRequired,
+  direction: PropTypes.string.isRequired,
+  headingText: PropTypes.string.isRequired,
+  helperText: PropTypes.string.isRequired,
+  background: PropTypes.string.isRequired,
+};

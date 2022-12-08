@@ -1,5 +1,6 @@
 import { Box, styled } from "@mui/material";
 import React from "react";
+import PropTypes from "prop-types";
 
 const Cardimg = ({ backgroundImage }) => {
   const Cardimg = styled(Box)(() => ({
@@ -21,3 +22,7 @@ const Cardimg = ({ backgroundImage }) => {
 };
 
 export default Cardimg;
+
+Cardimg.propTypes = {
+  backgroundImage: PropTypes.string.isRequired,
+};

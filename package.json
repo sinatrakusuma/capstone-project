@@ -25,7 +25,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-sw": "http-server ./build",
+    "build-serve": "npm run build && npm run start-sw",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -46,7 +50,9 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.27.0",
-    "eslint-plugin-react": "^7.31.10"
+    "eslint": "^8.29.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.31.11",
+    "http-server": "^14.1.1"
   }
 }

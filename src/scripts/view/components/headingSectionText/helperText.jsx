@@ -1,5 +1,6 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
 
 export default function HelperText({ helperText }) {
   return (
@@ -21,3 +22,7 @@ export default function HelperText({ helperText }) {
     </Typography>
   );
 }
+
+HelperText.propTypes = {
+  helperText: PropTypes.string.isRequired,
+};
