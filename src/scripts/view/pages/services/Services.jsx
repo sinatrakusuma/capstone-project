@@ -1,9 +1,9 @@
 import React from "react";
-import Footer from "../../../components/footer/footer";
-import HalfImg from "../../../components/halfImg/HalfImg";
-import Hero from "../../../components/hero/heroHome";
-import Navbar from "../../../components/navbar/navbar";
-import CardBackground from "../../../components/cardimg/CardBackground";
+import Footer from "../../components/footer/footer";
+import HeroServices from "../../components/hero/heroServices";
+import Navbar from "../../components/navbar/navbar";
+import ServicesInfo from "../../components/services/servicesInfo";
+import FiturInfo from "../../components/Info/fiturInfo";
 import { Container } from "@mui/system";
 
 export default function Services() {
@@ -23,9 +23,9 @@ export default function Services() {
           },
         }}
       >
-        <Hero />
-        <HalfImg />
-        <CardBackground />
+        <HeroServices />
+        <FiturInfo />
+        <ServicesInfo />
       </Container>
       <Footer />
     </div>

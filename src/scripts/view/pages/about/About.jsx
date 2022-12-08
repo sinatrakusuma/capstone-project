@@ -1,13 +1,13 @@
 import React from "react";
-import Footer from "../../../components/footer/footer";
-import Navbar from "../../../components/navbar/navbar";
-import Card from "../../../components/card/Card";
-import Article from "../../../components/article/Article";
-import { Container, Box } from "@mui/system";
-import HeroAboutUs from "../../../components/hero/heroAboutUs";
+import Footer from "../../components/footer/footer";
+import Navbar from "../../components/navbar/navbar";
+import Card from "../../components/card/Card";
+import Article from "../../components/article/Article";
+import HeadingSectionText from "../../components/headingSectionText/headingSectionText";
+import HeroAboutUs from "../../components/hero/heroAboutUs";
 import dataVisiMisi from "../../../data/dataVisiMisi";
+import { Container, Box } from "@mui/system";
 import { Typography } from "@mui/material";
-import HeadingSectionText from "../../../components/headingSectionText/headingSectionText";
 
 const About = () => {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
-import Footer from "../../../components/footer/footer";
-import Navbar from "../../../components/navbar/navbar";
-import Checkout from "../../../components/form/Checkout";
-import HeroWasteBank from "../../../components/hero/heroWasteBank";
-import SectionWasteInfo from "../../../components/sectionWasteInfo/sectionWasteInfo";
+import Footer from "../../components/footer/footer";
+import Navbar from "../../components/navbar/navbar";
+import Checkout from "../../components/form/Checkout";
+import HeroWasteBank from "../../components/hero/heroWasteBank";
+import SectionWasteInfo from "../../components/sectionWasteInfo/sectionWasteInfo";
 import dataWasteCategory from "../../../data/dataWasteCategory";
 import dataStepSwapWaste from "../../..//data/dataStepSwapTrash";
 import { Container } from "@mui/system";

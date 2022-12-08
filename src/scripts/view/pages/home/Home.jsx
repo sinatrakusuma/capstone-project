@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "../../../components/navbar/navbar";
-import Footer from "../../../components/footer/footer";
-import Content from "../../../components/content/Content";
-import HeroHome from "../../../components/hero/heroHome";
-import Accordion from "../../../components/accordion/simpleAccordion";
-import ReasonInformation from "../../../components/reasonInformation/reasonInformation";
-import RecycleSectionHome from "../../../components/recycleSectionHome/recycleSectionHome";
-import ConclusionSection from "../../../components/conclusionSection/conclusionSection";
+import Navbar from "../../components/navbar/navbar";
+import Footer from "../../components/footer/footer";
+import Content from "../../components/content/Content";
+import HeroHome from "../../components/hero/heroHome";
+import Accordion from "../../components/accordion/simpleAccordion";
+import ReasonInformation from "../../components/reasonInformation/reasonInformation";
+import RecycleSectionHome from "../../components/recycleSectionHome/recycleSectionHome";
+import ConclusionSection from "../../components/conclusionSection/conclusionSection";
 import { Container } from "@mui/system";
 
 const Home = () => {

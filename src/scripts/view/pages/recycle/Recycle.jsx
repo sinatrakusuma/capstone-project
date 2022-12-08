@@ -1,14 +1,12 @@
 // import Splash from '../../components/splash/Splash'
 import React from "react";
-import Footer from "../../../components/footer/footer";
-import HeroHome from "../../../components/hero/heroHome";
-import Navbar from "../../../components/navbar/navbar";
-import HalfImage from "../../../components/halfImg/HalfImg";
-import Marticle from "../../../components/article/Marticle1";
-import Plastik from "../../../components/halfImg/Plastik";
-import Kertas from "../../../components/halfImg/Kertas";
-import Botol from "../../../components/halfImg/Botol";
-import CardBackground from "../../../components/cardimg/CardBackground";
+import Footer from "../../components/footer/footer";
+import Navbar from "../../components/navbar/navbar";
+import HeroRecycle from "../../components/hero/heroRecycle";
+import CardBackground from "../../components/cardimg/CardBackground";
+import Article from "../../components/article/Article";
+import RecycleWasteInfo from "../../components/halfImg/recycleWaysInfo";
+import dataWasteRecycle from "../../../data/dataWasteRecycle";
 import { Container } from "@mui/system";
 
 const DaurUlang = () => {
@@ -28,12 +26,13 @@ const DaurUlang = () => {
           },
         }}
       >
-        <HeroHome />
-        <Marticle />
-        <HalfImage />
-        <Plastik />
-        <Kertas />
-        <Botol />
+        <HeroRecycle />
+        <Article
+          dataInfo={dataWasteRecycle}
+          textHeading="Jenis-Jenis Sampah"
+          helperText="Berikut hal-hal yang perlu kamu ketahui sebelum mendaur ulang sampah"
+        />
+        <RecycleWasteInfo />
         <CardBackground />
         {/* <Splash/> */}
       </Container>
