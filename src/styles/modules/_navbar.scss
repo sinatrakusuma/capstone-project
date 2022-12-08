@@ -1,4 +1,5 @@
 header{
+
     .logo-name {
         font-size: 24px;
         color: #172D15;
@@ -14,12 +15,11 @@ header{
             font-family: "Manrope";
             font-size: 14px;
             color: #7D7D7D;
-            margin: 14px;
             text-transform: capitalize;
-            padding: 8px 0;
+            padding: 8px 4px;
             border-bottom: 2px solid transparent;
             transition: border-bottom 0.1s;
-            -webkit-transition: border-bottom 0.2s;
+            -webkit-transition: border-bottom 0.1s;
             font-weight: 400;
     
             &:hover {

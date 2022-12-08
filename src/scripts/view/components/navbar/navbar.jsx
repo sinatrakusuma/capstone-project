@@ -21,9 +21,10 @@ const Navbar = () => {
           xs: "100%",
           xl: "1200px",
         },
+        height: "90px",
         padding: {
-          xs: "12px 24px",
-          md: "12px 40px",
+          xs: "24px",
+          md: "24px 40px",
         },
         backgroundColor: "#FFFFFF",
         boxShadow: "0px 4px 4px rgba(0,0,0,0.05)",

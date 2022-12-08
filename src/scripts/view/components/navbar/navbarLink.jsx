@@ -16,13 +16,13 @@ export default function NavbarLink() {
       sx={{
         fontWeight: 500,
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "flex-end",
         alignItems: "center",
         flexDirection: {
           xs: "column",
           md: "row",
         },
-        gap: "4px",
+        gap: "24px",
         position: {
           xs: "absolute",
           md: "static",
